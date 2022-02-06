@@ -16,13 +16,17 @@ namespace CustomerFeedback.Data
     {
     }
 
-    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    //{
-    //  if (!optionsBuilder.IsConfigured)
-    //  {
-    //    optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=CSATdb;Trusted_Connection=True;MultipleActiveResultSets=true");
-    //  }
-    //}
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+      if (!optionsBuilder.IsConfigured)
+      {
+        optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=CSATdb;Trusted_Connection=True;MultipleActiveResultSets=true");
+      }
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+    }
 
     public DbSet<Administrator> Administrator { get; set; }
 
@@ -34,8 +38,8 @@ namespace CustomerFeedback.Data
 
     public DbSet<SurveyQuestion> SurveyQuestion { get; set; }
 
-    public DbSet<CustomerFeedback.Models.Survey> Survey { get; set; }
+    public DbSet<Survey> Survey { get; set; }
 
-    public DbSet<CustomerFeedback.Models.SurveyResponse> SurveyResponse { get; set; }
+    public DbSet<SurveyResponse> SurveyResponse { get; set; }
   }
 }

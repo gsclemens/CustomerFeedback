@@ -23,8 +23,7 @@ namespace CustomerFeedback.Models
     public DateTime? ExpireDate { get; set; }
 
     [Display(Name = "Created By EmpId")]
-    [Column(TypeName = "VARCHAR(20)")]
-    public string? AdministratorId { get; set; }
+    public int AdministratorId { get; set; }
 
     /// <summary>
     /// Navigation classes

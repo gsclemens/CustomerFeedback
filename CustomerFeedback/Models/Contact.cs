@@ -18,12 +18,12 @@ namespace CustomerFeedback.Models
     [Display(Name = "First Name")]
     [MaxLength(50, ErrorMessage = "{0} max length is {1} characters.")]
     [Column(TypeName = "VARCHAR(50)")]
-    public string NameFirst { get; set; }
+    public string? NameFirst { get; set; }
 
     [Display(Name = "Last Name")]
     [MaxLength(50, ErrorMessage = "{0} max length is {1} characters.")]
     [Column(TypeName = "VARCHAR(50)")]
-    public string NameLast { get; set; }
+    public string? NameLast { get; set; }
 
     [MaxLength(200, ErrorMessage = "{0} max length is {1} characters.")]
     [Column(TypeName = "VARCHAR(200)")]
@@ -41,7 +41,7 @@ namespace CustomerFeedback.Models
     /// <summary>
     /// Navigation relationships
     /// </summary>
-    public Customer Customer { get; set; }
+    public Customer? Customer { get; set; }
 
     public List<SurveyResponse>? SurveyResponses { get; set; }
   }

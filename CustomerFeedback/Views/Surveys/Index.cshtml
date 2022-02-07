@@ -1,14 +1,39 @@
 ﻿@model IEnumerable<CustomerFeedback.Models.Survey>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Surveys";
 }
 
-<h1>Index</h1>
+<h1>Surveys</h1>
 
-<p>
+
+
+@*<p>
     <a asp-action="Create">Create New</a>
-</p>
+</p>*@
+<div class="row justify-content-between">
+  <div class="col-3">
+    <a asp-action="Create" class="btn btn-success my-2">Create New</a>
+  </div>
+  <div class="col-sm-auto">
+    <form asp-controller="Surveys" asp-action="Index" method="get">
+      <div class="row">
+        <div class="col">
+@*          <select asp-for="SurveyContact" asp-items="Model?.Contacts" class="form-control my-2">
+            <option value="">All Departments</option>
+          </select>*@
+        </div>
+        <div class="col">
+          <input type="text" name="SearchString" class="form-control my-2" placeholder="Search Survey Title" />
+        </div>
+        <div class="col-2">
+            <input type ="submit" value="Filter" class="btn btn-secondary my-2"/>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
 <table class="table">
     <thead>
         <tr>

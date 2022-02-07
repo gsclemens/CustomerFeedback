@@ -34,7 +34,7 @@ namespace CustomerFeedback.Models
     public string? Phone { get; set; }
 
     [Display(Name = "Company Contact Id")]
-    public int ContactId { get; set; }
+    public int? ContactId { get; set; }
 
     public List<Contact>? Contacts { get; set; }
   }

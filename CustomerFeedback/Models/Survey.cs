@@ -16,7 +16,7 @@ namespace CustomerFeedback.Models
 
     [Display(Name = "Created")]
     [DataType(DataType.Date)]
-    public DateTime CreatedDate { get; set; }
+    public DateTime CreatedDate { get; set; } //= DateTime.Now;
 
     [Display(Name = "Expires")]
     [DataType(DataType.Date)]
@@ -28,10 +28,10 @@ namespace CustomerFeedback.Models
     /// <summary>
     /// Navigation classes
     /// </summary>
-    public List<SurveyResponse> SurveyResponses { get; set; }
+    public List<SurveyResponse>? SurveyResponses { get; set; }
 
-    public List<SurveyQuestion> SurveyQuestions { get; set; }
+    public List<SurveyQuestion>? SurveyQuestions { get; set; }
 
-    public Administrator Administrator { get; set; }
+    public Administrator? Administrator { get; set; }
   }
 }

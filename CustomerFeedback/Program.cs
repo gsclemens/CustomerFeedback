@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using CustomerFeedback.Data;
+using CustomerFeedback.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<CSATContext>(options =>
@@ -10,6 +12,14 @@ builder.Services.AddDbContext<CSATContext>(options =>
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+//db seeder
+using (var scope = app.Services.CreateScope())
+{
+  var services = scope.ServiceProvider;
+
+  SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

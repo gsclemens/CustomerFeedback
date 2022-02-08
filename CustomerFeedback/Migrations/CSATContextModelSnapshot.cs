@@ -35,7 +35,6 @@ namespace CustomerFeedback.Migrations
                         .HasColumnType("VARCHAR(200)");
 
                     b.Property<string>("EmpId")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("VARCHAR(50)");
 
@@ -78,12 +77,10 @@ namespace CustomerFeedback.Migrations
                         .HasColumnType("VARCHAR(200)");
 
                     b.Property<string>("NameFirst")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("VARCHAR(50)");
 
                     b.Property<string>("NameLast")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("VARCHAR(50)");
 
@@ -114,7 +111,7 @@ namespace CustomerFeedback.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("ContactId")
+                    b.Property<int?>("ContactId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -153,6 +150,9 @@ namespace CustomerFeedback.Migrations
                     b.Property<string>("Options")
                         .HasColumnType("VARCHAR");
 
+                    b.Property<string>("QuestionKpiType")
+                        .HasColumnType("VARCHAR(100)");
+
                     b.Property<string>("QuestionType")
                         .HasColumnType("VARCHAR(100)");
 
@@ -175,6 +175,10 @@ namespace CustomerFeedback.Migrations
 
                     b.Property<int>("AdministratorId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Audience")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");

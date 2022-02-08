@@ -1,7 +1,9 @@
-﻿@model IEnumerable<CustomerFeedback.Models.Survey>
+﻿@*@model IEnumerable<CustomerFeedback.Models.Survey>*@
+@model CustomerFeedback.Models.ViewModels.SurveyAudienceVM
 
 @{
     ViewData["Title"] = "Surveys";
+    string tableNav = "Actions";
 }
 
 <h1>Surveys</h1>
@@ -19,9 +21,9 @@
     <form asp-controller="Surveys" asp-action="Index" method="get">
       <div class="row">
         <div class="col">
-@*          <select asp-for="SurveyContact" asp-items="Model?.Contacts" class="form-control my-2">
-            <option value="">All Departments</option>
-          </select>*@
+          <select asp-for="SurveyAudience" asp-items="Model?.Audiences" class="form-control my-2">
+            <option value="">All Audiences</option>
+          </select>
         </div>
         <div class="col">
           <input type="text" name="SearchString" class="form-control my-2" placeholder="Search Survey Title" />
@@ -35,50 +37,68 @@
 </div>
 
 <table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ExpireDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AdministratorId)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExpireDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AdministratorId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
+  <thead>
+      <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Surveys[0].Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surveys[0].Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surveys[0].CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surveys[0].ExpireDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surveys[0].AdministratorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surveys[0].Audience)
+        </th>
+        <th>
+            @Html.DisplayName(tableNav)
+        </th>
+      </tr>
+  </thead>
+  <tbody>
+    @foreach (var item in Model.Surveys) {
+      <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpireDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdministratorId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Audience)
+        </td>
+        <td>
+          <div class="row justify-content-between">
+            <div class="col text-nowrap">
+              <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary" title="Edit">
+                <i class="fas fa-pencil-alt text-light"></i>
+              </a> |
+              <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info" title="Details">
+                <i class="fas fa-list-ul text-light"></i>
+              </a> |
+              <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger" title="Delete">
+                <i class="fas fa-trash-alt text-light"></i>
+              </a> 
+            </div>
+          </div>
+        </td>
+      </tr>
+    }
+  </tbody>
 </table>

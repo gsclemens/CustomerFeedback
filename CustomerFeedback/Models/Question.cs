@@ -11,19 +11,30 @@ namespace CustomerFeedback.Models
     [Column(TypeName = "VARCHAR(1000)")]
     public string Text { get; set; }
 
-    [Display(Name = "Question Type")]
+    /// <summary>
+    /// 10-point scale, Multi-choice, Comment
+    /// </summary>
+    [Display(Name = "Type")]
     [Column(TypeName = "VARCHAR(100)")]
     public string? QuestionType { get; set; }
 
-    [Display(Name = "Multiple Choice Options")]
+    [Display(Name = "Choices")]
     [Column(TypeName = "VARCHAR")]
     public string? Options { get; set; }
 
     /// <summary>
+    /// Key Performance Indicators that each question is addressing (internal reference)
+    /// e.g.; Professionalism, Value, Service, Warehouse, Satisfaction, etc.
+    /// </summary>
+    [Display(Name = "KPI")]
+    [Column(TypeName = "VARCHAR(100)")]
+    public string? QuestionKpiType { get; set; }
+
+    /// <summary>
     /// Navigation classes
     /// </summary>
-    public List<SurveyResponse> SurveyResponses { get; set; }
+    public List<SurveyResponse>? SurveyResponses { get; set; }
 
-    public List<SurveyQuestion> SurveyQuestions { get; set; }
+    public List<SurveyQuestion>? SurveyQuestions { get; set; }
   }
 }

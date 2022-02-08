@@ -22,8 +22,11 @@ namespace CustomerFeedback.Models
     [DataType(DataType.Date)]
     public DateTime? ExpireDate { get; set; }
 
-    [Display(Name = "Created By EmpId")]
+    [Display(Name = "Created By")]
     public int AdministratorId { get; set; }
+
+    [Display(Name = "Audience")]
+    public string Audience { get; set; }
 
     /// <summary>
     /// Navigation classes

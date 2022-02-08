@@ -2,46 +2,87 @@
 
 @{
     ViewData["Title"] = "Questions";
+    string tableNav = "Actions";
 }
 
 <h1>Questions</h1>
 
-<p>
+@*<p>
     <a asp-action="Create">Create New</a>
-</p>
+</p>*@
+<div class="row justify-content-between">
+  <div class="col-3">
+    <a asp-action="Create" class="btn btn-success my-2">Create New</a>
+  </div>
+  <div class="col-sm-auto">
+    <form asp-controller="Questions" asp-action="Index" method="get">
+      <div class="row">
+        <div class="col">
+@*          <select asp-for="SurveyContact" asp-items="Model?.Contacts" class="form-control my-2">
+            <option value="">All Departments</option>
+          </select>*@
+        </div>
+        <div class="col">
+          <input type="text" name="SearchString" class="form-control my-2" placeholder="Search Survey Title" />
+        </div>
+        <div class="col-2">
+            <input type ="submit" value="Filter" class="btn btn-secondary my-2"/>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 <table class="table">
     <thead>
         <tr>
-            <th>
+            <th class="col-md-4">
                 @Html.DisplayNameFor(model => model.Text)
             </th>
-            <th>
+            <th class="col">
                 @Html.DisplayNameFor(model => model.QuestionType)
             </th>
-            <th>
+            <th class="col">
                 @Html.DisplayNameFor(model => model.Options)
             </th>
-            <th></th>
+            <th class="col">
+                @Html.DisplayNameFor(model => model.QuestionKpiType)
+            </th>
+            <th class="col">
+                @Html.DisplayName(tableNav)
+            </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Text)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QuestionType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Options)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+    <tr>
+        <td class="col-md-4">
+            @Html.DisplayFor(modelItem => item.Text)
+        </td>
+        <td class="col">
+            @Html.DisplayFor(modelItem => item.QuestionType)
+        </td>
+        <td class="col">
+            @Html.DisplayFor(modelItem => item.Options)
+        </td>
+        <td class="col">
+            @Html.DisplayFor(modelItem => item.QuestionKpiType)
+        </td>
+        <td class="col">
+          <div class="row justify-content-between">
+            <div class="col text-nowrap">
+              <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary" title="Edit">
+                <i class="fas fa-pencil-alt text-light"></i>
+              </a> |
+              <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info" title="Details">
+                <i class="fas fa-list-ul text-light"></i>
+              </a> |
+              <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger" title="Delete">
+                <i class="fas fa-trash-alt text-light"></i>
+              </a> 
+            </div>
+          </div>
+        </td>
+    </tr>
 }
     </tbody>
 </table>

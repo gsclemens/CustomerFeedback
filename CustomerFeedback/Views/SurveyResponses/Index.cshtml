@@ -7,9 +7,29 @@
 
 <h1>Survey Responses</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<a asp-action="Create" class="btn btn-success my-2">Create New</a>
+@*<div class="row justify-content-between">
+  <div class="col-3">
+    <a asp-action="Create" class="btn btn-success my-2">Create New</a>
+  </div>
+  <div class="col-sm-auto">
+    <form asp-controller="SurveysResponses" asp-action="Index" method="get">
+      <div class="row">
+        <div class="col">
+          <select asp-for="SurveyResponseCustomer" asp-items="Model.Customers" class="form-control my-2">
+            <option value="">All Customers</option>
+          </select>
+        </div>
+        <div class="col">
+          <input type="text" name="SearchString" class="form-control my-2" placeholder="Search Survey Title" />
+        </div>
+        <div class="col-2">
+            <input type ="submit" value="Filter" class="btn btn-secondary my-2"/>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>*@
 <table class="table">
     <thead>
         <tr>

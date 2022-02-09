@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "mssql1": {
-      "secretStore": "LocalSecretsFile",
+      "secretStore": "AzureAppSettings",
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/csatdb-sqlserver/databases/CSATdb_AzureSQL",
       "type": "mssql.azure",
       "connectionId": "ConnectionStrings:CSATContext"

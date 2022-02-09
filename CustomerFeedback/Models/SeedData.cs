@@ -11,7 +11,7 @@ namespace CustomerFeedback.Models
           serviceProvider.GetRequiredService<
               DbContextOptions<CSATContext>>()))
       {
-        // Look for any movies.
+        // Look for any questions.
         if (context.Question.Any())
         {
           return;   // DB has been seeded

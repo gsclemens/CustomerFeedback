@@ -16,5 +16,13 @@ namespace CustomerFeedback.Models
     [MaxLength(100, ErrorMessage = "{0} max length is {1} characters.")]
     [Column(TypeName = "VARCHAR(100)")]
     public string? Description { get; set; }
+
+    /// <summary>
+    /// Navigation relationships
+    /// These are 1:many because each CommodityType category has (describes) many
+    /// Customers, but those Customers do not each have many CommodityType categories.
+    /// </summary>
+
+    public List<Customer>? Customers { get; set; }
   }
 }

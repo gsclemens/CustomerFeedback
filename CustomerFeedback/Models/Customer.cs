@@ -57,13 +57,13 @@ namespace CustomerFeedback.Models
     /// </summary>
 
     public List<Contact>? Contacts { get; set; }
-    public List<CommodityType>? CommodityTypes { get; set; }
-    public List<CustomerType>? CustomerTypes { get; set; }
+    public CommodityType? CommodityType { get; set; }
+    public CustomerType? CustomerType { get; set; }
 
     /// <summary>
     /// Customers and Administrators is many-to-many relationship
-    /// there can be several Admin. records attached to a Company
-    /// and multiple Company records can be attached to one or more Admin. records
+    /// there can be several Admin. Table records attached to a Company
+    /// and multiple Company Table records can be attached to one or more Admin. records
     /// </summary>
 
     public ICollection<Administrator>? Administrators { get; set; }

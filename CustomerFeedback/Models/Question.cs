@@ -39,7 +39,7 @@ namespace CustomerFeedback.Models
 
     public List<SurveyResponse>? SurveyResponses { get; set; }
     public List<SurveyQuestion>? SurveyQuestions { get; set; }
-    public List<KpiType>? KpiTypes { get; set; }
+    public List<KpiType>? KpiType { get; set; }
     public CustomerType? CustomerType { get; set; }
   }
 }

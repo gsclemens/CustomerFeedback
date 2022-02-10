@@ -28,6 +28,49 @@ namespace CustomerFeedback.Models
           Location = ""
         }
         );
+        // Look for any records.
+        if (context.Administrator.Any())
+        {
+          return;   // DB has been seeded
+        }
+        context.Administrator.AddRange(
+          new Administrator
+          {
+            EmpId = "KBUNDA",
+            Title = "Applications Developer",
+            NameFirst = "Kris",
+            NameLast = "Bunda",
+            Email = "kbunda@company.com",
+            Phone = "515-555-5555"
+          },
+          new Administrator
+          {
+            EmpId = "EDIKEMAN",
+            Title = "Scrum Master & IT Business Analyst",
+            NameFirst = "Emily",
+            NameLast = "Dikeman",
+            Email = "edikeman@company.com",
+            Phone = "515-555-4444"
+          },
+          new Administrator
+          {
+            EmpId = "GCLEMENS",
+            Title = "IT Architect",
+            NameFirst = "Gen",
+            NameLast = "Clemens",
+            Email = "gclemens@company.com",
+            Phone = "515-555-3333"
+          },
+          new Administrator
+          {
+            EmpId = "ASNYDER",
+            Title = "Intern",
+            NameFirst = "Alan",
+            NameLast = "Snyder",
+            Email = "asnyder@company.com",
+            Phone = "515-555-6666"
+          }
+        );
 
         // Look for any records.
         if (context.Customer.Any())
@@ -528,7 +571,7 @@ namespace CustomerFeedback.Models
           new CustomerType
           {
             Type = "DCT",
-            Description = "Dedicated"
+            Description = "Dedicated Partnership"
           }
         );
 
@@ -544,18 +587,68 @@ namespace CustomerFeedback.Models
           },
           new KpiType
           {
-            Type = "ISNW",
-            Description = "Integrated Solutions No Warehouse"
+            Type = "Fleet Mgmt Srvcs",
+            Description = "Fleet Management Services"
           },
           new KpiType
           {
-            Type = "MT",
-            Description = "Managed Transportation"
+            Type = "Communication",
+            Description = "Communication"
           },
           new KpiType
           {
-            Type = "DCT",
-            Description = "Dedicated"
+            Type = "Warehouse",
+            Description = "Warehouse"
+          },
+          new KpiType
+          {
+            Type = "Value",
+            Description = "Value"
+          },
+          new KpiType
+          {
+            Type = "Service",
+            Description = "Service"
+          },
+          new KpiType
+          {
+            Type = "Network Partnerships",
+            Description = "Network Partnerships"
+          },
+          new KpiType
+          {
+            Type = "Warehousing Services",
+            Description = "Warehousing Services"
+          },
+          new KpiType
+          {
+            Type = "Customer Service",
+            Description = "Customer Service"
+          },
+          new KpiType
+          {
+            Type = "Operation Priorities",
+            Description = "Operation Priorities"
+          },
+          new KpiType
+          {
+            Type = "Overall Satisfaction",
+            Description = "Overall Satisfaction"
+          },
+          new KpiType
+          {
+            Type = "Warehouse",
+            Description = "Warehouse"
+          },
+          new KpiType
+          {
+            Type = "Recommend & Refer",
+            Description = "Recommendation and Referral"
+          },
+          new KpiType
+          {
+            Type = "Overall Performance",
+            Description = "Overall Performance"
           }
         );
 

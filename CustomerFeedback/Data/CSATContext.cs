@@ -29,17 +29,14 @@ namespace CustomerFeedback.Data
     }
 
     public DbSet<Administrator> Administrator { get; set; }
-
-    public DbSet<Customer> Customer { get; set; }
-
+    public DbSet<CommodityType> ComodityType { get; set; }
     public DbSet<Contact> Contact { get; set; }
-
+    public DbSet<Customer> Customer { get; set; }
+    public DbSet<CustomerType> CustomerType { get; set; }
+    public DbSet<KpiType> KpiType { get; set; }
     public DbSet<Question> Question { get; set; }
-
-    public DbSet<SurveyQuestion> SurveyQuestion { get; set; }
-
     public DbSet<Survey> Survey { get; set; }
-
+    public DbSet<SurveyQuestion> SurveyQuestion { get; set; }
     public DbSet<SurveyResponse> SurveyResponse { get; set; }
   }
 }

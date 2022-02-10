@@ -12,8 +12,8 @@ namespace CustomerFeedback.Models
     [Column(TypeName = "VARCHAR(10)")]
     public string Type { get; set; }
 
-    [MaxLength(100, ErrorMessage = "{0} max length is {1} characters.")]
-    [Column(TypeName = "VARCHAR(100)")]
-    public string Description { get; set; }
+    [MaxLength(1000, ErrorMessage = "{0} max length is {1} characters.")]
+    [Column(TypeName = "VARCHAR(1000)")]
+    public string? Description { get; set; }
   }
 }

@@ -41,15 +41,16 @@ namespace CustomerFeedback.Models
     /// </summary>
 
     [Display(Name = "VP Operations")]
-    public int? VPO { get; set; }
+    public int? VPOId { get; set; }
 
     [Display(Name = "Ops Leader")]
-    public int? OpsLeader { get; set; }
+    public int? OpsLeaderId { get; set; }
 
     [Display(Name = "Sales Rep")]
-    public int? SalesRep { get; set; }
+    public int? SalesRepId { get; set; }
 
-    public int? Executive { get; set; }
+    [Display(Name = "Executive")]
+    public int? ExecutiveId { get; set; }
 
     /// <summary>
     /// Navigation relationships
@@ -58,6 +59,13 @@ namespace CustomerFeedback.Models
     public List<Contact>? Contacts { get; set; }
     public List<CommodityType>? CommodityTypes { get; set; }
     public List<CustomerType>? CustomerTypes { get; set; }
-    public List<Administrator>? Administrators { get; set; }
+
+    /// <summary>
+    /// Customers and Administrators is many-to-many relationship
+    /// there can be several Admin. records attached to a Company
+    /// and multiple Company records can be attached to one or more Admin. records
+    /// </summary>
+
+    public ICollection<Administrator>? Administrators { get; set; }
   }
 }

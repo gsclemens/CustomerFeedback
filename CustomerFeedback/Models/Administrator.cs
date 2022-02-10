@@ -10,7 +10,7 @@ namespace CustomerFeedback.Models
     [Display(Name = "Employee ID")]
     [MaxLength(50, ErrorMessage = "{0} max length is {1} characters.")]
     [Column(TypeName = "VARCHAR(20)")]
-    public string? EmpId { get; set; }
+    public string EmpId { get; set; }
 
     /// <summary>
     /// Can be: AppAdmin, VPO, OpsLeader, SalesRep, Executive
@@ -45,5 +45,7 @@ namespace CustomerFeedback.Models
     /// </summary>
 
     public List<Survey>? Surveys { get; set; }
+
+    public ICollection<Customer>? Customers { get; set; }
   }
 }

@@ -185,470 +185,82 @@ namespace CustomerFeedback.Models
           new Customer
           {
             Name = "Bobcat",
-            Team = "T108",
             CustomerTypeId = 5,
             Url = "https://company.com",
             CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 29,
-            OpsLeaderId = 13,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Bobcat",
-            Team = "T111",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 29,
-            OpsLeaderId = 13,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Bobcat",
-            Team = "T226",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 29,
-            OpsLeaderId = 13,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Bobcat",
-            Team = "T344",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 29,
-            OpsLeaderId = 13,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Bobcat",
-            Team = "T427",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 29,
-            OpsLeaderId = 13,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Bobcat",
-            Team = "T553",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 29,
-            OpsLeaderId = 13,
-            SalesRepId = 22,
-            ExecutiveId = 11
+            Note = "ex:Renewal due for review 3/1/2023"
           },
           new Customer
           {
             Name = "Daikin",
-            Team = "T083",
             CustomerTypeId = 5,
             Url = "https://company.com",
             CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 28,
-            OpsLeaderId = 19,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Daikin",
-            Team = "T606",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 28,
-            OpsLeaderId = 17,
-            SalesRepId = 22,
-            ExecutiveId = 11
+            Note = "ex:Renewal due for review 3/1/2023"
           },
           new Customer
           {
             Name = "FlexSteel",
-            Team = "T099",
             CustomerTypeId = 5,
             Url = "https://company.com",
             CommodityTypeId = 2,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 24,
-            OpsLeaderId = 21,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "FlexSteel",
-            Team = "T143",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 27,
-            OpsLeaderId = 15,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "FlexSteel",
-            Team = "T144",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 27,
-            OpsLeaderId = 15,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "FlexSteel",
-            Team = "T145",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 27,
-            OpsLeaderId = 15,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "FlexSteel",
-            Team = "T148",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 29,
-            OpsLeaderId = 20,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "FlexSteel",
-            Team = "T246",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 27,
-            OpsLeaderId = 15,
-            SalesRepId = 22,
-            ExecutiveId = 11
+            Note = "ex:Renewal due for review 3/1/2023"
           },
           new Customer
           {
             Name = "Interstate Battery",
-            Team = "T049",
             CustomerTypeId = 5,
             Url = "https://company.com",
             CommodityTypeId = 3,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 24,
-            OpsLeaderId = 21,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Interstate Battery",
-            Team = "T598",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 3,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 29,
-            OpsLeaderId = 20,
-            SalesRepId = 22,
-            ExecutiveId = 11
+            Note = "ex:Renewal due for review 3/1/2023"
           },
           new Customer
           {
             Name = "Safelite",
-            Team = "T072",
             CustomerTypeId = 5,
             Url = "https://company.com",
             CommodityTypeId = 3,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 25,
-            OpsLeaderId = 16,
-            SalesRepId = 22,
-            ExecutiveId = 10
-          },
-          new Customer
-          {
-            Name = "Safelite",
-            Team = "T074",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 3,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 25,
-            OpsLeaderId = 16,
-            SalesRepId = 22,
-            ExecutiveId = 10
-          },
-          new Customer
-          {
-            Name = "Safelite",
-            Team = "T270",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 3,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 24,
-            OpsLeaderId = 18,
-            SalesRepId = 22,
-            ExecutiveId = 10
-          },
-          new Customer
-          {
-            Name = "Safelite",
-            Team = "T272",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 3,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 25,
-            OpsLeaderId = 16,
-            SalesRepId = 22,
-            ExecutiveId = 10
-          },
-          new Customer
-          {
-            Name = "Safelite",
-            Team = "T562",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 3,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 25,
-            OpsLeaderId = 16,
-            SalesRepId = 22,
-            ExecutiveId = 10
+            Note = "ex:Renewal due for review 3/1/2023"
           },
           new Customer
           {
             Name = "Mission Foods",
-            Team = "T077",
             CustomerTypeId = 5,
             Url = "https://company.com",
             CommodityTypeId = 4,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 24,
-            OpsLeaderId = 21,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Mission Foods",
-            Team = "T147",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 5,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 26,
-            OpsLeaderId = 12,
-            SalesRepId = 22,
-            ExecutiveId = 10
-          },
-          new Customer
-          {
-            Name = "Mission Foods",
-            Team = "T437",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 5,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 26,
-            OpsLeaderId = 12,
-            SalesRepId = 22,
-            ExecutiveId = 10
-          },
-          new Customer
-          {
-            Name = "Mission Foods",
-            Team = "T444",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 5,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 26,
-            OpsLeaderId = 12,
-            SalesRepId = 22,
-            ExecutiveId = 10
+            Note = "ex:Renewal due for review 3/1/2023"
           },
           new Customer
           {
             Name = "Klockner Plentaplast",
-            Team = "T097",
             CustomerTypeId = 5,
             Url = "https://company.com",
             CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 24,
-            OpsLeaderId = 18,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Klockner Plentaplast",
-            Team = "T674",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 27,
-            OpsLeaderId = 15,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Klockner Plentaplast",
-            Team = "T662",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 24,
-            OpsLeaderId = 18,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Klockner Plentaplast",
-            Team = "T744",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 23,
-            OpsLeaderId = 18,
-            SalesRepId = 22,
-            ExecutiveId = 11
+            Note = "ex:Renewal due for review 3/1/2023"
           },
           new Customer
           {
             Name = "Heidtman Steel",
-            Team = "T101",
             CustomerTypeId = 7,
             Url = "https://company.com",
             CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 24,
-            OpsLeaderId = 17,
-            SalesRepId = 22,
-            ExecutiveId = 11
+            Note = "ex:Renewal due for review 3/1/2023"
           },
           new Customer
           {
             Name = "Marmon Keystone",
-            Team = "T106",
             CustomerTypeId = 5,
             Url = "https://company.com",
             CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 28,
-            OpsLeaderId = 14,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Marmon Keystone",
-            Team = "T123",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 28,
-            OpsLeaderId = 14,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Marmon Keystone",
-            Team = "T156",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 28,
-            OpsLeaderId = 14,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Marmon Keystone",
-            Team = "T158",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 28,
-            OpsLeaderId = 14,
-            SalesRepId = 22,
-            ExecutiveId = 11
-          },
-          new Customer
-          {
-            Name = "Marmon Keystone",
-            Team = "T170",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 28,
-            OpsLeaderId = 14,
-            SalesRepId = 22,
-            ExecutiveId = 11
+            Note = "ex:Renewal due for review 3/1/2023"
           },
           new Customer
           {
             Name = "Midwest Pipe & Steel",
-            Team = "T359",
             CustomerTypeId = 8,
             Url = "https://company.com",
             CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023",
-            VPOId = 28,
-            OpsLeaderId = 19,
-            SalesRepId = 22,
-            ExecutiveId = 11
+            Note = "ex:Renewal due for review 3/1/2023"
           }
         );
 

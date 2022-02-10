@@ -50,7 +50,5 @@ namespace CustomerFeedback.Models
     /// </summary>
 
     public List<Survey>? Surveys { get; set; }
-
-    public ICollection<Customer>? Customers { get; set; }
   }
 }

@@ -1,5 +1,5 @@
 ﻿@*@model IEnumerable<CustomerFeedback.Models.Survey>*@
-@model CustomerFeedback.Models.ViewModels.SurveyAudienceVM
+@model CustomerFeedback.Models.ViewModels.SurveyCustomerTypeVM
 
 @{
     ViewData["Title"] = "Surveys";
@@ -17,12 +17,12 @@
   <div class="col-3">
     <a asp-action="Create" class="btn btn-success my-2">Create New</a>
   </div>
-@*  <div class="col-sm-auto">
+  <div class="col-sm-auto">
     <form asp-controller="Surveys" asp-action="Index" method="get">
       <div class="row">
         <div class="col">
-          <select asp-for="SurveyAudience" asp-items="Model?.Audiences" class="form-control my-2">
-            <option value="">All Audiences</option>
+          <select asp-for="SurveyCustomerType" asp-items="Model?.CustomerTypes" class="form-control my-2">
+            <option value="">All Types</option>
           </select>
         </div>
         <div class="col">
@@ -33,7 +33,7 @@
         </div>
       </div>
     </form>
-  </div>*@
+  </div>
 </div>
 
 <table class="table table-sm">

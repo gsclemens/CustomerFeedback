@@ -2,11 +2,11 @@
 
 namespace CustomerFeedback.Models.ViewModels
 {
-  public class SurveyAudienceVM
+  public class SurveyCustomerTypeVM
   {
     public List<Survey>? Surveys { get; set; }
-    public SelectList? Audiences { get; set; }
-    public string? SurveyAudience { get; set; }
+    public SelectList? CustomerTypes { get; set; }
+    public string? SurveyCustomerType { get; set; }
     public string? SearchString { get; set; }
   }
 }

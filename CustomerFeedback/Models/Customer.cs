@@ -12,11 +12,6 @@ namespace CustomerFeedback.Models
     [Column(TypeName = "VARCHAR(100)")]
     public string Name { get; set; }
 
-    [Display(Name = "Team #")]
-    [MaxLength(8, ErrorMessage = "{0} max length is {1} characters.")]
-    [Column(TypeName = "VARCHAR(8)")]
-    public string Team { get; set; }
-
     [Display(Name = "Customer Type")]
     public int? CustomerTypeId { get; set; }
 
@@ -37,22 +32,6 @@ namespace CustomerFeedback.Models
     public string? Url { get; set; }
 
     /// <summary>
-    /// Pull id values from Administrator Table with a lookup column for each of the next 4 roles
-    /// </summary>
-
-    [Display(Name = "VP Operations")]
-    public int? VPOId { get; set; }
-
-    [Display(Name = "Ops Leader")]
-    public int? OpsLeaderId { get; set; }
-
-    [Display(Name = "Sales Rep")]
-    public int? SalesRepId { get; set; }
-
-    [Display(Name = "Executive")]
-    public int? ExecutiveId { get; set; }
-
-    /// <summary>
     /// Navigation relationships
     /// </summary>
 
@@ -66,13 +45,5 @@ namespace CustomerFeedback.Models
     /// </summary>
 
     public List<SurveyResponse>? SurveyResponses { get; set; }
-
-    /// <summary>
-    /// Customers and Administrators is many-to-many relationship
-    /// there can be several Admin. Table records attached to a Company
-    /// and multiple Company Table records can be attached to one or more Admin. records
-    /// </summary>
-
-    public ICollection<Administrator>? Administrators { get; set; }
   }
 }

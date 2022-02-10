@@ -9,8 +9,8 @@ namespace CustomerFeedback.Models
     public int Id { get; set; }
 
     [Display(Name = "Key Perf. Indicator")]
-    [MaxLength(20, ErrorMessage = "{0} max length is {1} characters, please enter a short name for the type, and a more elaborate explanation for the description.")]
-    [Column(TypeName = "VARCHAR(20)")]
+    [MaxLength(50, ErrorMessage = "{0} max length is {1} characters, please enter a short name for the type, and a more elaborate explanation for the description.")]
+    [Column(TypeName = "VARCHAR(50)")]
     public string Type { get; set; }
 
     [MaxLength(100, ErrorMessage = "{0} max length is {1} characters.")]

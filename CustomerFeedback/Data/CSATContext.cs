@@ -48,7 +48,7 @@ namespace CustomerFeedback.Data
     }
 
     public DbSet<Administrator> Administrator { get; set; }
-    public DbSet<CommodityType> ComodityType { get; set; }
+    public DbSet<CommodityType> CommodityType { get; set; }
     public DbSet<Contact> Contact { get; set; }
     public DbSet<Customer> Customer { get; set; }
     public DbSet<CustomerType> CustomerType { get; set; }

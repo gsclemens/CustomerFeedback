@@ -30,6 +30,11 @@ namespace CustomerFeedback.Models
     [Column(TypeName = "VARCHAR(50)")]
     public string NameLast { get; set; }
 
+    [NotMapped]
+    [Display(Name = "Name")]
+    public string NameFull
+    { get { return $"{NameLast}, {NameFirst}"; } }
+
     [MaxLength(200, ErrorMessage = "{0} max length is {1} characters.")]
     [Column(TypeName = "VARCHAR(200)")]
     [DataType(DataType.EmailAddress)]

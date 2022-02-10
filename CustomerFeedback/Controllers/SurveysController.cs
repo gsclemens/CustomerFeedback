@@ -86,7 +86,7 @@ namespace CustomerFeedback.Controllers
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Id,Title,Description,CreatedDate,ExpireDate,AdministratorId,Audience")] Survey survey)
+    public async Task<IActionResult> Create([Bind("Id,Title,Description,CreatedDate,ExpireDate,AdministratorId,CustomerTypeId")] Survey survey)
     {
       if (ModelState.IsValid)
       {
@@ -118,7 +118,7 @@ namespace CustomerFeedback.Controllers
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,CreatedDate,ExpireDate,AdministratorId,Audience")] Survey survey)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,CreatedDate,ExpireDate,AdministratorId,CustomerTypeId")] Survey survey)
     {
       if (id != survey.Id)
       {

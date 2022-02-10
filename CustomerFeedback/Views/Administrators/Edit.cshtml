@@ -2,11 +2,12 @@
 
 @{
     ViewData["Title"] = "Edit";
+    string fullName = "NameFull";
 }
 
 <h1>Edit</h1>
 
-<h4>Administrator</h4>
+<h4>Administrator <small class="lead">| @Html.Display(fullName)</small></h4>
 <hr />
 <div class="row">
     <div class="col-md-4">

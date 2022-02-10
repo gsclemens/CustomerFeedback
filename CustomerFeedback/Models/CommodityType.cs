@@ -6,6 +6,7 @@ namespace CustomerFeedback.Models
   public class CommodityType
   {
     ///Commodity = the type of goods or services our customers ship
+    public int Id { get; set; }
 
     [Display(Name = "Key Perf. Indicator")]
     [MaxLength(20, ErrorMessage = "{0} max length is {1} characters, please enter a short name for the type, and a more elaborate explanation for the description.")]

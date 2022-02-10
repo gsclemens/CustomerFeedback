@@ -23,39 +23,39 @@ namespace CustomerFeedback.Controllers
     }
 
     // GET: Surveys
-    //public async Task<IActionResult> Index()
-    //{
-    //    return View(await _context.Survey.ToListAsync());
-    //}
+    public async Task<IActionResult> Index()
+    {
+      return View(await _context.Survey.ToListAsync());
+    }
 
     // GET: Surveys
-    public async Task<IActionResult> Index(string surveyAudience, string searchString)
-    {
-      // Use LINQ to get list of audiences.
-      IQueryable<string> audienceQuery = from m in _context.Survey
-                                         orderby m.Audience
-                                         select m.Audience;
-      var surveys = from m in _context.Survey
-                    select m;
+    //public async Task<IActionResult> Index(string surveyAudience, string searchString)
+    //{
+    //  // Use LINQ to get list of audiences.
+    //  IQueryable<string> audienceQuery = from m in _context.Survey
+    //                                     orderby m.Audience
+    //                                     select m.Audience;
+    //  var surveys = from m in _context.Survey
+    //                select m;
 
-      if (!string.IsNullOrEmpty(searchString))
-      {
-        surveys = surveys.Where(s => s.Title!.Contains(searchString));
-      }
+    //  if (!string.IsNullOrEmpty(searchString))
+    //  {
+    //    surveys = surveys.Where(s => s.Title!.Contains(searchString));
+    //  }
 
-      if (!string.IsNullOrEmpty(surveyAudience))
-      {
-        surveys = surveys.Where(x => x.Audience == surveyAudience);
-      }
+    //  if (!string.IsNullOrEmpty(surveyAudience))
+    //  {
+    //    surveys = surveys.Where(x => x.Audience == surveyAudience);
+    //  }
 
-      var surveyAudienceVM = new SurveyAudienceVM
-      {
-        Audiences = new SelectList(await audienceQuery.Distinct().ToListAsync()),
-        Surveys = await surveys.ToListAsync()
-      };
+    //  var surveyAudienceVM = new SurveyAudienceVM
+    //  {
+    //    Audiences = new SelectList(await audienceQuery.Distinct().ToListAsync()),
+    //    Surveys = await surveys.ToListAsync()
+    //  };
 
-      return View(surveyAudienceVM);
-    }
+    //  return View(surveyAudienceVM);
+    //}
 
     // GET: Surveys/Details/5
     public async Task<IActionResult> Details(int? id)

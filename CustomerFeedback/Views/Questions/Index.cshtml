@@ -24,6 +24,9 @@
                 @Html.DisplayNameFor(model => model.KpiTypeId)
             </th>
             <th class="col">
+                @Html.DisplayNameFor(model => model.CustomerType)
+            </th>
+            <th class="col">
                 @Html.DisplayName(tableNav)
             </th>
         </tr>
@@ -42,6 +45,9 @@
         </td>
         <td class="col">
             @Html.DisplayFor(modelItem => item.KpiTypeId)
+        </td>
+        <td class="col">
+            @Html.DisplayFor(modelItem => item.CustomerType)
         </td>
         <td class="col">
           <div class="row justify-content-between">

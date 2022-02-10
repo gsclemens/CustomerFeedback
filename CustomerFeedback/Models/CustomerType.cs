@@ -5,6 +5,8 @@ namespace CustomerFeedback.Models
 {
   public class CustomerType
   {
+    public int Id { get; set; }
+
     [Display(Name = "Company Type")]
     [MaxLength(10, ErrorMessage = "{0} max length is {1} characters.")]
     [Column(TypeName = "VARCHAR(10)")]

@@ -25,16 +25,16 @@ namespace CustomerFeedback.Models
     [Display(Name = "Created By")]
     public int AdministratorId { get; set; }
 
-    [Display(Name = "Audience")]
-    public string Audience { get; set; }
+    [Display(Name = "Customer Type")]
+    public string CustomerTypeId { get; set; }
 
     /// <summary>
     /// Navigation classes
     /// </summary>
+
     public List<SurveyResponse>? SurveyResponses { get; set; }
-
     public List<SurveyQuestion>? SurveyQuestions { get; set; }
-
     public Administrator? Administrator { get; set; }
+    public CustomerType? CustomerType { get; set; }
   }
 }

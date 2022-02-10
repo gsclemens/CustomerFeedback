@@ -17,7 +17,7 @@
   <div class="col-3">
     <a asp-action="Create" class="btn btn-success my-2">Create New</a>
   </div>
-  <div class="col-sm-auto">
+@*  <div class="col-sm-auto">
     <form asp-controller="Surveys" asp-action="Index" method="get">
       <div class="row">
         <div class="col">
@@ -33,7 +33,7 @@
         </div>
       </div>
     </form>
-  </div>
+  </div>*@
 </div>
 
 <table class="table">
@@ -55,7 +55,7 @@
             @Html.DisplayNameFor(model => model.Surveys[0].AdministratorId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Surveys[0].Audience)
+            @Html.DisplayNameFor(model => model.Surveys[0].CustomerType)
         </th>
         <th>
             @Html.DisplayName(tableNav)
@@ -81,7 +81,7 @@
             @Html.DisplayFor(modelItem => item.AdministratorId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Audience)
+            @Html.DisplayFor(modelItem => item.CustomerType)
         </td>
         <td>
           <div class="row justify-content-between">

@@ -50,7 +50,6 @@ namespace CustomerFeedback.Models
     /// Navigation relationships
 
     public Customer? Customer { get; set; }
-    public CustomerType? CustomerType { get; set; }
     public List<SurveyResponse>? SurveyResponses { get; set; }
   }
 }

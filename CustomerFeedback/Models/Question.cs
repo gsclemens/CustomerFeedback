@@ -29,6 +29,10 @@ namespace CustomerFeedback.Models
     [Column(TypeName = "VARCHAR(100)")]
     public int KpiTypeId { get; set; }
 
+    [Display(Name = "Customer Type")]
+    [Column(TypeName = "VARCHAR(100)")]
+    public int CustomerTypeId { get; set; }
+
     /// <summary>
     /// Navigation classes
     /// </summary>
@@ -36,5 +40,6 @@ namespace CustomerFeedback.Models
     public List<SurveyResponse>? SurveyResponses { get; set; }
     public List<SurveyQuestion>? SurveyQuestions { get; set; }
     public List<KpiType>? KpiTypes { get; set; }
+    public CustomerType? CustomerType { get; set; }
   }
 }

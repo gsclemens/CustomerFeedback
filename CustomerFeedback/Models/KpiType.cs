@@ -7,6 +7,8 @@ namespace CustomerFeedback.Models
   {
     ///KPI = Key Performance Indicator
 
+    public int Id { get; set; }
+
     [Display(Name = "Key Perf. Indicator")]
     [MaxLength(10, ErrorMessage = "{0} max length is {1} characters.")]
     [Column(TypeName = "VARCHAR(10)")]

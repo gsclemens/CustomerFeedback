@@ -26,11 +26,9 @@ namespace CustomerFeedback.Models
     /// Key Performance Indicators
     /// </summary>
     [Display(Name = "Key Performance Indicator")]
-    [Column(TypeName = "VARCHAR(100)")]
     public int KpiTypeId { get; set; }
 
     [Display(Name = "Customer Type")]
-    [Column(TypeName = "VARCHAR(100)")]
     public int CustomerTypeId { get; set; }
 
     /// <summary>

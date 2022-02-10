@@ -16,17 +16,17 @@ namespace CustomerFeedback.Models
 
     [Display(Name = "Created")]
     [DataType(DataType.Date)]
-    public DateTime CreatedDate { get; set; } //= DateTime.Now;
+    public DateTime CreatedDate { get; set; }
 
     [Display(Name = "Expires")]
     [DataType(DataType.Date)]
     public DateTime? ExpireDate { get; set; }
 
     [Display(Name = "Created By")]
-    public int AdministratorId { get; set; }
+    public int? AdministratorId { get; set; }
 
     [Display(Name = "Customer Type")]
-    public string CustomerTypeId { get; set; }
+    public int CustomerTypeId { get; set; }
 
     /// <summary>
     /// Navigation classes

@@ -16,13 +16,13 @@ namespace CustomerFeedback.Data
     {
     }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-      if (!optionsBuilder.IsConfigured)
-      {
-        optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=CSATdb;Trusted_Connection=True;MultipleActiveResultSets=true");
-      }
-    }
+    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //{
+    //  if (!optionsBuilder.IsConfigured)
+    //  {
+    //    optionsBuilder.UseSqlServer("Server=tcp:csatdb-sqlserver.database.windows.net,1433;Database=coreDB;User ID=kbunda;Password=IsThisComplexEnough22!!;Encrypt=true;Connection Timeout=30;");
+    //  }
+    //}
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

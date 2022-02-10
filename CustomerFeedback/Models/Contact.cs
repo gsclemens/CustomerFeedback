@@ -7,6 +7,12 @@ namespace CustomerFeedback.Models
   {
     public int Id { get; set; }
 
+    [Display(Name = "Company")]
+    public int CustomerId { get; set; }
+
+    [Display(Name = "Type")]
+    public int CustomerTypeId { get; set; }
+
     [MaxLength(100, ErrorMessage = "{0} max length is {1} characters.")]
     [Column(TypeName = "VARCHAR(100)")]
     public string? Title { get; set; }
@@ -35,14 +41,11 @@ namespace CustomerFeedback.Models
     [DataType(DataType.PhoneNumber)]
     public string? Phone { get; set; }
 
-    [Display(Name = "Company")]
-    public int CustomerId { get; set; }
-
     /// <summary>
     /// Navigation relationships
-    /// </summary>
-    public Customer? Customer { get; set; }
 
+    public Customer? Customer { get; set; }
+    public CustomerType? CustomerType { get; set; }
     public List<SurveyResponse>? SurveyResponses { get; set; }
   }
 }

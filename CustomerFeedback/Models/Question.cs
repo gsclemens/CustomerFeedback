@@ -23,18 +23,18 @@ namespace CustomerFeedback.Models
     public string? Options { get; set; }
 
     /// <summary>
-    /// Key Performance Indicators that each question is addressing (internal reference)
-    /// e.g.; Professionalism, Value, Service, Warehouse, Satisfaction, etc.
+    /// Key Performance Indicators
     /// </summary>
-    [Display(Name = "KPI")]
+    [Display(Name = "Key Performance Indicator")]
     [Column(TypeName = "VARCHAR(100)")]
-    public string? QuestionKpiType { get; set; }
+    public int KpiTypeId { get; set; }
 
     /// <summary>
     /// Navigation classes
     /// </summary>
-    public List<SurveyResponse>? SurveyResponses { get; set; }
 
+    public List<SurveyResponse>? SurveyResponses { get; set; }
     public List<SurveyQuestion>? SurveyQuestions { get; set; }
+    public List<KpiType>? KpiTypes { get; set; }
   }
 }

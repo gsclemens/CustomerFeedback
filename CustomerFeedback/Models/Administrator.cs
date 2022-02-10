@@ -12,9 +12,13 @@ namespace CustomerFeedback.Models
     [Column(TypeName = "VARCHAR(20)")]
     public string? EmpId { get; set; }
 
+    /// <summary>
+    /// Can be: AppAdmin, VPO, OpsLeader, SalesRep, Executive
+    /// </summary>
+
     [MaxLength(100, ErrorMessage = "{0} max length is {1} characters.")]
     [Column(TypeName = "VARCHAR(100)")]
-    public string? Title { get; set; }
+    public string Title { get; set; }
 
     [Display(Name = "First Name")]
     [MaxLength(50, ErrorMessage = "{0} max length is {1} characters.")]

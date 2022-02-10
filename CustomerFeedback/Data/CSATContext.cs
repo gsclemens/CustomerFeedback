@@ -35,6 +35,16 @@ namespace CustomerFeedback.Data
         .HasOne(e => e.Question)
         .WithMany()
         .OnDelete(DeleteBehavior.Restrict);
+
+      modelBuilder.Entity<SurveyResponse>()
+        .HasOne(e => e.Survey)
+        .WithMany()
+        .OnDelete(DeleteBehavior.Restrict);
+
+      modelBuilder.Entity<SurveyResponse>()
+        .HasOne(e => e.Question)
+        .WithMany()
+        .OnDelete(DeleteBehavior.Restrict);
     }
 
     public DbSet<Administrator> Administrator { get; set; }

@@ -10,7 +10,6 @@
   <ItemGroup>
     <Compile Remove="Controllers\BaseController.cs" />
     <Compile Remove="Models\BaseModel.cs" />
-    <Compile Remove="Models\SeedData.cs" />
   </ItemGroup>
 
   <ItemGroup>

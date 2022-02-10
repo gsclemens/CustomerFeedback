@@ -8,10 +8,10 @@ namespace CustomerFeedback.Models
     public int Id { get; set; }
 
     [Display(Name = "Survey ID")]
-    public int SurveyId { get; set; }
+    public int? SurveyId { get; set; }
 
     [Display(Name = "Question ID")]
-    public int QuestionId { get; set; }
+    public int? QuestionId { get; set; }
 
     [Display(Name = "Survey Assignee")]
     public int? ContactId { get; set; }
@@ -37,8 +37,12 @@ namespace CustomerFeedback.Models
     /// forwarded by another employee and returned anonymously. Having the CustomerId is a fallback then.
     /// </summary>
 
+    [ForeignKey("SurveyId")]
     public Survey Survey { get; set; }
+
+    [ForeignKey("QuestionId")]
     public Question Question { get; set; }
+
     public Contact? Contact { get; set; }
     public Customer? Customer { get; set; }
   }

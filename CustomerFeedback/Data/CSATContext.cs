@@ -26,6 +26,15 @@ namespace CustomerFeedback.Data
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+      modelBuilder.Entity<SurveyQuestion>()
+      .HasOne(e => e.Survey)
+      .WithMany()
+      .OnDelete(DeleteBehavior.Restrict);
+
+      modelBuilder.Entity<SurveyQuestion>()
+        .HasOne(e => e.Question)
+        .WithMany()
+        .OnDelete(DeleteBehavior.Restrict);
     }
 
     public DbSet<Administrator> Administrator { get; set; }

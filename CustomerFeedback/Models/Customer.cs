@@ -61,6 +61,13 @@ namespace CustomerFeedback.Models
     public CustomerType? CustomerType { get; set; }
 
     /// <summary>
+    /// 1:Many Relation: a Company has many Survey Responses,
+    /// but an individual SR should have only one Customer & Client
+    /// </summary>
+
+    public List<SurveyResponse>? SurveyResponses { get; set; }
+
+    /// <summary>
     /// Customers and Administrators is many-to-many relationship
     /// there can be several Admin. Table records attached to a Company
     /// and multiple Company Table records can be attached to one or more Admin. records

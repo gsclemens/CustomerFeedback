@@ -39,6 +39,10 @@ namespace CustomerFeedback.Controllers
       var surveys = from m in _context.Survey
                     select m;
 
+      IQueryable<string> adminEmpIdQuery = from i in _context.Survey
+                                           orderby i.Administrator.NameFull
+                                           select i.Administrator.EmpId;
+
       if (!string.IsNullOrEmpty(searchString))
       {
         surveys = surveys.Where(s => s.Title!.Contains(searchString));
@@ -49,13 +53,18 @@ namespace CustomerFeedback.Controllers
         surveys = surveys.Where(x => x.CustomerType.Type == surveyCustomerType);
       }
 
-      var surveyCustomerTypeVM = new SurveyCustomerTypeVM
+      if (id != 0)
+      {
+        surveys = surveys.Where(x => x.CustomerType.Type == surveyCustomerType);
+      }
+
+      var surveyVM = new SurveyVM
       {
         CustomerTypes = new SelectList(await customerTypeQuery.Distinct().ToListAsync()),
         Surveys = await surveys.ToListAsync(),
       };
 
-      return View(surveyCustomerTypeVM);
+      return View(surveyVM);
     }
 
     // GET: Surveys/Details/5

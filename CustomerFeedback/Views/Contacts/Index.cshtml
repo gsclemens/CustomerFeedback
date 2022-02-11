@@ -17,11 +17,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.Note)
             </th>
-            <th>
+@*            <th>
                 @Html.DisplayNameFor(model => model.NameFirst)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.NameLast)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.NameFull)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Email)
@@ -46,11 +49,14 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Note)
             </td>
-            <td>
+@*            <td>
                 @Html.DisplayFor(modelItem => item.NameFirst)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NameLast)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.NameFull)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
@@ -59,7 +65,7 @@
                 @Html.DisplayFor(modelItem => item.Phone)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Customer.Id)
+                @Html.DisplayFor(modelItem => item.CustomerId)
             </td>
             <td>
               <div class="row justify-content-between">

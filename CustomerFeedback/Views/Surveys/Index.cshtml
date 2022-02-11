@@ -1,5 +1,5 @@
 ﻿@*@model IEnumerable<CustomerFeedback.Models.Survey>*@
-@model CustomerFeedback.Models.ViewModels.SurveyCustomerTypeVM
+@model CustomerFeedback.Models.ViewModels.SurveyVM
 
 @{
     ViewData["Title"] = "Surveys";
@@ -76,7 +76,7 @@
             @Html.DisplayFor(modelItem => item.ExpireDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Administrator.EmpId)
+            @Html.DisplayFor(modelItem => item.Administrator)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CustomerType.Type)

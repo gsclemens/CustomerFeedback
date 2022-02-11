@@ -13,256 +13,270 @@ namespace CustomerFeedback.Models
       {
         #region Contacts
 
-        // Look for any records.
-        //if (context.Contact.Any())
-        //{
-        //  return;   // DB has been seeded
-        //}
-        //context.Contact.AddRange(
-        //  new Contact
-        //  {
-        //    Title = "North American Logistics Manager",
-        //    NameFirst = "Russ",
-        //    NameLast = "Smith",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "Bobcat",
-        //    Location = "Bismarck, ND",
-        //  },
-        //  new Contact
-        //  {
-        //    Title = "VP of Procurement",
-        //    NameFirst = "John",
-        //    NameLast = "Wood",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "Bobcat",
-        //    Location = "Gwinner,ND",
-        //  },
-        //  new Contact
-        //  {
-        //    Title = "Shipping Coordinator",
-        //    NameFirst = "Evelyn",
-        //    NameLast = "Irreguas",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "Daikin",
-        //    Location = "SAN LUIS POTOSI, MEXICO"
-        //  },
-        //  new Contact
-        //  {
-        //    Title = "Business Development Manager",
-        //    NameFirst = "Josh",
-        //    NameLast = "Dotson",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "Heidtman Steel",
-        //    Location = "Toledo, OH"
-        //  },
-        //  new Contact
-        //  {
-        //    Title = "Direct of Resource Planning",
-        //    NameFirst = "Darlene",
-        //    NameLast = "Dotson",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "Heidtman Steel",
-        //    Location = "Erie, MI"
-        //  },
-        //  new Contact
-        //  {
-        //    Title = "Vice President",
-        //    NameFirst = "Tim",
-        //    NameLast = "Janssen",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "Rasmussen Group",
-        //    Location = "Des Moines, IA"
-        //  },
-        //  new Contact
-        //  {
-        //    Title = "Sales Manager",
-        //    NameFirst = "Bob",
-        //    NameLast = "Dole",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "Midwest Pipe & Steel",
-        //    Location = "Fort Wayne, IN"
-        //  },
-        //  new Contact
-        //  {
-        //    Title = "Director",
-        //    NameFirst = "Trampas",
-        //    NameLast = "Goodmanson",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "Bobcat",
-        //    Location = "West Fargo"
-        //  },
-        //  new Contact
-        //  {
-        //    Title = "Shipping Coordinator",
-        //    NameFirst = "Evelyn",
-        //    NameLast = "Irreguas",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "Daikin",
-        //    Location = "SAN LUIS POTOSI, MEXICO"
-        //  },
-        //  new Contact
-        //  {
-        //    Title = "Comptroller",
-        //    NameFirst = "Herb",
-        //    NameLast = "Sutton",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "State of Iowa - Alchoholic Beverage Divison",
-        //    Location = "Ankeny,IA"
-        //  },
-        //  new Contact
-        //  {
-        //    Title = "VP Logistics and Parts",
-        //    NameFirst = "Barb",
-        //    NameLast = "Soja",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "Marmon/Keystone",
-        //    Location = "Southampton,MA"
-        //  },
-        //  new Contact
-        //  {
-        //    Title = "Supply Chain Manager",
-        //    NameFirst = "Aaron",
-        //    NameLast = "Ross",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "Klockner Pentaplast",
-        //    Location = "Rural Retreat,VA"
-        //  },
-        //  new Contact
-        //  {
-        //    Title = "Regional Transportation Manager",
-        //    NameFirst = "Ashley",
-        //    NameLast = "Roberts",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "Mission Foods",
-        //    Location = "Dallas,TX"
-        //  },
-        //  new Contact
-        //  {
-        //    Title = "Director of Materials Mgt & Logistics",
-        //    NameFirst = "John",
-        //    NameLast = "Kemp",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "Safelite",
-        //    Location = "Columbus,OH"
-        //  },
-        //  new Contact
-        //  {
-        //    Title = "VP Logistics and Parts",
-        //    NameFirst = "Tony",
-        //    NameLast = "Hayden",
-        //    Email = "contact@company.com",
-        //    Phone = "555-555-5555",
-        //    CustomerId = "Flexsteel",
-        //    Location = "Dubuque,IA"
-        //  }
-        //);
-        // Look for any records.
+        //Look for any records.
+        if (context.Contact.Any())
+        {
+          return;   // DB has been seeded
+        }
+        context.Contact.AddRange(
+          new Contact
+          {
+            Title = "North American Logistics Manager",
+            NameFirst = "Russ",
+            NameLast = "Smith",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 1,
+            Location = "Bismarck, ND",
+          },
+          new Contact
+          {
+            Title = "VP of Procurement",
+            NameFirst = "John",
+            NameLast = "Wood",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 1,
+            Location = "Gwinner,ND",
+          },
+          new Contact
+          {
+            Title = "Shipping Coordinator",
+            NameFirst = "Evelyn",
+            NameLast = "Irreguas",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 7,
+            Location = "SAN LUIS POTOSI, MEXICO"
+          },
+          new Contact
+          {
+            Title = "Business Development Manager",
+            NameFirst = "Josh",
+            NameLast = "Dotson",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 30,
+            Location = "Toledo, OH"
+          },
+          new Contact
+          {
+            Title = "Direct of Resource Planning",
+            NameFirst = "Darlene",
+            NameLast = "Dotson",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 30,
+            Location = "Erie, MI"
+          },
+          new Contact
+          {
+            Title = "Vice President",
+            NameFirst = "Tim",
+            NameLast = "Janssen",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 38,
+            Location = "Des Moines, IA"
+          },
+          new Contact
+          {
+            Title = "Sales Manager",
+            NameFirst = "Bob",
+            NameLast = "Dole",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 36,
+            Location = "Fort Wayne, IN"
+          },
+          new Contact
+          {
+            Title = "Director",
+            NameFirst = "Trampas",
+            NameLast = "Goodmanson",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 1,
+            Location = "West Fargo"
+          },
+          new Contact
+          {
+            Title = "Shipping Coordinator",
+            NameFirst = "Evelyn",
+            NameLast = "Irreguas",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 7,
+            Location = "SAN LUIS POTOSI, MEXICO"
+          },
+          new Contact
+          {
+            Title = "Comptroller",
+            NameFirst = "Herb",
+            NameLast = "Sutton",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 37,
+            Location = "Ankeny,IA"
+          },
+          new Contact
+          {
+            Title = "VP Logistics and Parts",
+            NameFirst = "Barb",
+            NameLast = "Soja",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 31,
+            Location = "Southampton,MA"
+          },
+          new Contact
+          {
+            Title = "Supply Chain Manager",
+            NameFirst = "Aaron",
+            NameLast = "Ross",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 28,
+            Location = "Rural Retreat,VA"
+          },
+          new Contact
+          {
+            Title = "Regional Transportation Manager",
+            NameFirst = "Ashley",
+            NameLast = "Roberts",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 23,
+            Location = "Dallas,TX"
+          },
+          new Contact
+          {
+            Title = "Director of Materials Mgt & Logistics",
+            NameFirst = "John",
+            NameLast = "Kemp",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 19,
+            Location = "Columbus,OH"
+          },
+          new Contact
+          {
+            Title = "VP Logistics and Parts",
+            NameFirst = "Tony",
+            NameLast = "Hayden",
+            Email = "contact@company.com",
+            Phone = "555-555-5555",
+            CustomerId = 12,
+            Location = "Dubuque,IA"
+          }
+        );
 
         #endregion Contacts
 
         #region Customers
 
-        //Look for any records.
-        if (context.Customer.Any())
-        {
-          return;   // DB has been seeded
-        }
-        context.Customer.AddRange(
-          new Customer
-          {
-            Name = "Bobcat",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023"
-          },
-          new Customer
-          {
-            Name = "Daikin",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023"
-          },
-          new Customer
-          {
-            Name = "FlexSteel",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 2,
-            Note = "ex:Renewal due for review 3/1/2023"
-          },
-          new Customer
-          {
-            Name = "Interstate Battery",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 3,
-            Note = "ex:Renewal due for review 3/1/2023"
-          },
-          new Customer
-          {
-            Name = "Safelite",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 3,
-            Note = "ex:Renewal due for review 3/1/2023"
-          },
-          new Customer
-          {
-            Name = "Mission Foods",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 4,
-            Note = "ex:Renewal due for review 3/1/2023"
-          },
-          new Customer
-          {
-            Name = "Klockner Plentaplast",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023"
-          },
-          new Customer
-          {
-            Name = "Heidtman Steel",
-            CustomerTypeId = 7,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023"
-          },
-          new Customer
-          {
-            Name = "Marmon Keystone",
-            CustomerTypeId = 5,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023"
-          },
-          new Customer
-          {
-            Name = "Midwest Pipe & Steel",
-            CustomerTypeId = 8,
-            Url = "https://company.com",
-            CommodityTypeId = 1,
-            Note = "ex:Renewal due for review 3/1/2023"
-          }
-        );
+        //if (context.Customer.Any())
+        //{
+        //  return;   // DB has been seeded
+        //}
+        //context.Customer.AddRange(
+        //  new Customer
+        //  {
+        //    Name = "Bobcat",
+        //    CustomerTypeId = 5,
+        //    Url = "https://company.com",
+        //    CommodityTypeId = 1,
+        //    Note = "ex:Renewal due for review 3/1/2023"
+        //  },
+        //  new Customer
+        //  {
+        //    Name = "Daikin",
+        //    CustomerTypeId = 5,
+        //    Url = "https://company.com",
+        //    CommodityTypeId = 1,
+        //    Note = "ex:Renewal due for review 3/1/2023"
+        //  },
+        //  new Customer
+        //  {
+        //    Name = "FlexSteel",
+        //    CustomerTypeId = 5,
+        //    Url = "https://company.com",
+        //    CommodityTypeId = 2,
+        //    Note = "ex:Renewal due for review 3/1/2023"
+        //  },
+        //  new Customer
+        //  {
+        //    Name = "Interstate Battery",
+        //    CustomerTypeId = 5,
+        //    Url = "https://company.com",
+        //    CommodityTypeId = 3,
+        //    Note = "ex:Renewal due for review 3/1/2023"
+        //  },
+        //  new Customer
+        //  {
+        //    Name = "Safelite",
+        //    CustomerTypeId = 5,
+        //    Url = "https://company.com",
+        //    CommodityTypeId = 3,
+        //    Note = "ex:Renewal due for review 3/1/2023"
+        //  },
+        //  new Customer
+        //  {
+        //    Name = "Mission Foods",
+        //    CustomerTypeId = 5,
+        //    Url = "https://company.com",
+        //    CommodityTypeId = 4,
+        //    Note = "ex:Renewal due for review 3/1/2023"
+        //  },
+        //  new Customer
+        //  {
+        //    Name = "Klockner Plentaplast",
+        //    CustomerTypeId = 5,
+        //    Url = "https://company.com",
+        //    CommodityTypeId = 1,
+        //    Note = "ex:Renewal due for review 3/1/2023"
+        //  },
+        //  new Customer
+        //  {
+        //    Name = "Heidtman Steel",
+        //    CustomerTypeId = 7,
+        //    Url = "https://company.com",
+        //    CommodityTypeId = 1,
+        //    Note = "ex:Renewal due for review 3/1/2023"
+        //  },
+        //  new Customer
+        //  {
+        //    Name = "Marmon Keystone",
+        //    CustomerTypeId = 5,
+        //    Url = "https://company.com",
+        //    CommodityTypeId = 1,
+        //    Note = "ex:Renewal due for review 3/1/2023"
+        //  },
+        //  new Customer
+        //  {
+        //    Name = "Midwest Pipe & Steel",
+        //    CustomerTypeId = 8,
+        //    Url = "https://company.com",
+        //    CommodityTypeId = 1,
+        //    Note = "ex:Renewal due for review 3/1/2023"
+        //  },
+        //  new Customer
+        //  {
+        //    Name = "State of Iowa - Alchoholic Beverage Divison",
+        //    CustomerTypeId = 6,
+        //    Url = "https://company.com",
+        //    CommodityTypeId = 5,
+        //    Note = "ex:Renewal due for review 3/1/2023"
+        //  },
+        //  new Customer
+        //  {
+        //    Name = "Rasmussen Group",
+        //    CustomerTypeId = 8,
+        //    Url = "https://company.com",
+        //    CommodityTypeId = 3,
+        //    Note = "ex:Renewal due for review 3/1/2023"
+        //  }
+        //);
 
         #endregion Customers
 

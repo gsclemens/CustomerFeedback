@@ -10,9 +10,6 @@ namespace CustomerFeedback.Models
     [Display(Name = "Company")]
     public int CustomerId { get; set; }
 
-    [Display(Name = "Type")]
-    public int CustomerTypeId { get; set; }
-
     [MaxLength(100, ErrorMessage = "{0} max length is {1} characters.")]
     [Column(TypeName = "VARCHAR(100)")]
     public string? Title { get; set; }
@@ -45,6 +42,11 @@ namespace CustomerFeedback.Models
     [Column(TypeName = "VARCHAR(20)")]
     [DataType(DataType.PhoneNumber)]
     public string? Phone { get; set; }
+
+    [Display(Name = "Location")]
+    [MaxLength(50, ErrorMessage = "{0} max length is {1} characters.")]
+    [Column(TypeName = "VARCHAR(50)")]
+    public string? Location { get; set; }
 
     /// <summary>
     /// Navigation relationships

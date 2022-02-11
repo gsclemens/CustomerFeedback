@@ -13,163 +13,163 @@ namespace CustomerFeedback.Models
       {
         #region Contacts
 
-        //Look for any records.
-        if (context.Contact.Any())
-        {
-          return;   // DB has been seeded
-        }
-        context.Contact.AddRange(
-          new Contact
-          {
-            Title = "North American Logistics Manager",
-            NameFirst = "Russ",
-            NameLast = "Smith",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 1,
-            Location = "Bismarck, ND",
-          },
-          new Contact
-          {
-            Title = "VP of Procurement",
-            NameFirst = "John",
-            NameLast = "Wood",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 1,
-            Location = "Gwinner,ND",
-          },
-          new Contact
-          {
-            Title = "Shipping Coordinator",
-            NameFirst = "Evelyn",
-            NameLast = "Irreguas",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 7,
-            Location = "SAN LUIS POTOSI, MEXICO"
-          },
-          new Contact
-          {
-            Title = "Business Development Manager",
-            NameFirst = "Josh",
-            NameLast = "Dotson",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 30,
-            Location = "Toledo, OH"
-          },
-          new Contact
-          {
-            Title = "Direct of Resource Planning",
-            NameFirst = "Darlene",
-            NameLast = "Dotson",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 30,
-            Location = "Erie, MI"
-          },
-          new Contact
-          {
-            Title = "Vice President",
-            NameFirst = "Tim",
-            NameLast = "Janssen",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 38,
-            Location = "Des Moines, IA"
-          },
-          new Contact
-          {
-            Title = "Sales Manager",
-            NameFirst = "Bob",
-            NameLast = "Dole",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 36,
-            Location = "Fort Wayne, IN"
-          },
-          new Contact
-          {
-            Title = "Director",
-            NameFirst = "Trampas",
-            NameLast = "Goodmanson",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 1,
-            Location = "West Fargo"
-          },
-          new Contact
-          {
-            Title = "Shipping Coordinator",
-            NameFirst = "Evelyn",
-            NameLast = "Irreguas",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 7,
-            Location = "SAN LUIS POTOSI, MEXICO"
-          },
-          new Contact
-          {
-            Title = "Comptroller",
-            NameFirst = "Herb",
-            NameLast = "Sutton",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 37,
-            Location = "Ankeny,IA"
-          },
-          new Contact
-          {
-            Title = "VP Logistics and Parts",
-            NameFirst = "Barb",
-            NameLast = "Soja",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 31,
-            Location = "Southampton,MA"
-          },
-          new Contact
-          {
-            Title = "Supply Chain Manager",
-            NameFirst = "Aaron",
-            NameLast = "Ross",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 28,
-            Location = "Rural Retreat,VA"
-          },
-          new Contact
-          {
-            Title = "Regional Transportation Manager",
-            NameFirst = "Ashley",
-            NameLast = "Roberts",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 23,
-            Location = "Dallas,TX"
-          },
-          new Contact
-          {
-            Title = "Director of Materials Mgt & Logistics",
-            NameFirst = "John",
-            NameLast = "Kemp",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 19,
-            Location = "Columbus,OH"
-          },
-          new Contact
-          {
-            Title = "VP Logistics and Parts",
-            NameFirst = "Tony",
-            NameLast = "Hayden",
-            Email = "contact@company.com",
-            Phone = "555-555-5555",
-            CustomerId = 12,
-            Location = "Dubuque,IA"
-          }
-        );
+        ////Look for any records.
+        //if (context.Contact.Any())
+        //{
+        //  return;   // DB has been seeded
+        //}
+        //context.Contact.AddRange(
+        //  new Contact
+        //  {
+        //    Title = "North American Logistics Manager",
+        //    NameFirst = "Russ",
+        //    NameLast = "Smith",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 1,
+        //    Location = "Bismarck, ND",
+        //  },
+        //  new Contact
+        //  {
+        //    Title = "VP of Procurement",
+        //    NameFirst = "John",
+        //    NameLast = "Wood",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 1,
+        //    Location = "Gwinner,ND",
+        //  },
+        //  new Contact
+        //  {
+        //    Title = "Shipping Coordinator",
+        //    NameFirst = "Evelyn",
+        //    NameLast = "Irreguas",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 7,
+        //    Location = "SAN LUIS POTOSI, MEXICO"
+        //  },
+        //  new Contact
+        //  {
+        //    Title = "Business Development Manager",
+        //    NameFirst = "Josh",
+        //    NameLast = "Dotson",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 30,
+        //    Location = "Toledo, OH"
+        //  },
+        //  new Contact
+        //  {
+        //    Title = "Direct of Resource Planning",
+        //    NameFirst = "Darlene",
+        //    NameLast = "Dotson",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 30,
+        //    Location = "Erie, MI"
+        //  },
+        //  new Contact
+        //  {
+        //    Title = "Vice President",
+        //    NameFirst = "Tim",
+        //    NameLast = "Janssen",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 38,
+        //    Location = "Des Moines, IA"
+        //  },
+        //  new Contact
+        //  {
+        //    Title = "Sales Manager",
+        //    NameFirst = "Bob",
+        //    NameLast = "Dole",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 36,
+        //    Location = "Fort Wayne, IN"
+        //  },
+        //  new Contact
+        //  {
+        //    Title = "Director",
+        //    NameFirst = "Trampas",
+        //    NameLast = "Goodmanson",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 1,
+        //    Location = "West Fargo"
+        //  },
+        //  new Contact
+        //  {
+        //    Title = "Shipping Coordinator",
+        //    NameFirst = "Evelyn",
+        //    NameLast = "Irreguas",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 7,
+        //    Location = "SAN LUIS POTOSI, MEXICO"
+        //  },
+        //  new Contact
+        //  {
+        //    Title = "Comptroller",
+        //    NameFirst = "Herb",
+        //    NameLast = "Sutton",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 37,
+        //    Location = "Ankeny,IA"
+        //  },
+        //  new Contact
+        //  {
+        //    Title = "VP Logistics and Parts",
+        //    NameFirst = "Barb",
+        //    NameLast = "Soja",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 31,
+        //    Location = "Southampton,MA"
+        //  },
+        //  new Contact
+        //  {
+        //    Title = "Supply Chain Manager",
+        //    NameFirst = "Aaron",
+        //    NameLast = "Ross",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 28,
+        //    Location = "Rural Retreat,VA"
+        //  },
+        //  new Contact
+        //  {
+        //    Title = "Regional Transportation Manager",
+        //    NameFirst = "Ashley",
+        //    NameLast = "Roberts",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 23,
+        //    Location = "Dallas,TX"
+        //  },
+        //  new Contact
+        //  {
+        //    Title = "Director of Materials Mgt & Logistics",
+        //    NameFirst = "John",
+        //    NameLast = "Kemp",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 19,
+        //    Location = "Columbus,OH"
+        //  },
+        //  new Contact
+        //  {
+        //    Title = "VP Logistics and Parts",
+        //    NameFirst = "Tony",
+        //    NameLast = "Hayden",
+        //    Email = "contact@company.com",
+        //    Phone = "555-555-5555",
+        //    CustomerId = 12,
+        //    Location = "Dubuque,IA"
+        //  }
+        //);
 
         #endregion Contacts
 
@@ -282,84 +282,252 @@ namespace CustomerFeedback.Models
 
         #region Questions
 
-        //if (context.Question.Any())
-        //{
-        //  return;   // DB has been seeded
-        //}
-        //context.Question.AddRange(
-        //  new Question
-        //  {
-        //    Text = "Ruan's on-time delivery rate meets my expectations.",
-        //    Type = "10-pt scale",
-        //    Options = "",
-        //    KpiType = "Transportation Management Services",
-        //    CustomerTypeId = "IS"
-        //  },
-        //  new Question
-        //  {
-        //    Text = "Ruan's on-time delivery rate meets my expectations.",
-        //    Type = "10-pt scale",
-        //    Options = "",
-        //    KpiType = "Transportation Management Services",
-        //    CustomerTypeId = "MT"
-        //  },
-        //  new Question
-        //  {
-        //    Text = "Ruan's order fulfillment and inventory accuracy meet my expectations.",
-        //    QuestionType = "10-pt scale",
-        //    Options = null,
-        //    KpiTypeId = "Warehousing Services"
-        //  },
-        //  new Question
-        //  {
-        //    Text = "Ruan's personnel are responsive and courteous.",
-        //    QuestionType = "10-pt scale",
-        //    Options = null,
-        //    KpiTypeId = "Professionalism"
-        //  },
-        //  new Question
-        //  {
-        //    Text = "Safety is a key priority for Ruan.",
-        //    QuestionType = "10-pt scale",
-        //    Options = null,
-        //    KpiTypeId = "Operation Priorities"
-        //  },
-        //  new Question
-        //  {
-        //    Text = "Ruan's drivers act according to my standards for reliability, integrity and appearance.",
-        //    QuestionType = "10-pt scale",
-        //    Options = null,
-        //    KpiTypeId = "Professionalism"
-        //  },
-        //  new Question
-        //  {
-        //    Text = "Likelihood of recommending Ruan to business associate.",
-        //    QuestionType = "10-pt scale",
-        //    Options = null,
-        //    KpiTypeId = "Recommendation and Referral"
-        //  },
-        //  new Question
-        //  {
-        //    Text = "Ruan proficiently manages our carrier Request For Proposal (RFP) events.",
-        //    QuestionType = "10-pt scale",
-        //    Options = null,
-        //    KpiTypeId = "Transportation Management Services"
-        //  },
-        //  new Question
-        //  {
-        //    Text = "Ruan's order fulfillment and inventory accuracy meet my expectations.",
-        //    QuestionType = "10-pt scale",
-        //    Options = null,
-        //    KpiTypeId = "Warehousing Services"
-        //  },
-        //  new Question
-        //  {
-        //    Text = "Ruan's team acts as an extension of our transportation team.",
-        //    QuestionType = "10-pt scale",
-        //    Options = null,
-        //    KpiTypeId = "Transportation Management Services"
-        //  }
-        //);
+        if (context.Question.Any())
+        {
+          return;   // DB has been seeded
+        }
+        context.Question.AddRange(
+        new Question
+        {
+          Text = "Ruan's on-time delivery rate meets my expectations.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 2,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan's suite of tools for route optimization and network analysis meets my needs.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 2,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan provides an effective and unique backhaul program.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 2,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan performs at or above our revenue-sharing agreement.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 2,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan partner carriers are professional and Ruan’s team promptly addresses any concerns.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 3,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan’s Claims Management Processes support your company’s business needs.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 3,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan's Customer Portal is easily accessible and provides me valuable information and visibility",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 3,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan's Routing Optimization and/or Carrier Selection provides a cost effective and service oriented solution.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 3,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan offers ideas to improve my supply chain network.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 3,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan improves our transportation process and provides information that drives efficiency, cost avoidance, and removes waste.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 3,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan's Business Intelligence Reporting provides meaningful metrics that help me to better manage my business.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 3,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan completes your company's warehouse orders on time.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 4,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan's order fulfillment and inventory accuracy meet my expectations.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 4,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan provides timely feedback on supplier compliance and performance.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 4,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan’s ability to adjust to your company's seasonal demands meets my needs.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 4,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan offers ideas to help improve trailer utilization and overall product density.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 4,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan understands my business and is knowledgeable with regard to the transportation industry in general.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 5,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan’s personnel act according to my standards for responsiveness, reliability and integrity.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 5,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan collaborates effectively with your company to evaluate, optimize and deliver a one-source, value-added solution.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 5,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan’s team members understand my operation/business and are knowledgeable with regard to the transportation industry in general.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 5,
+          CustomerTypeId = 7,
+        },
+        new Question
+        {
+          Text = "Ruan’s team acts according to my standards for reliability and integrity.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 5,
+          CustomerTypeId = 7,
+        },
+        new Question
+        {
+          Text = "Ruan's personnel are responsive and courteous.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 5,
+          CustomerTypeId = 7,
+        },
+        new Question
+        {
+          Text = "Ruan’s team acts as an extension of our transportation team.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 5,
+          CustomerTypeId = 7,
+        },
+        new Question
+        {
+          Text = "Ruan's drivers act according to my standards for reliability, integrity and appearance.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 5,
+          CustomerTypeId = 8,
+        },
+        new Question
+        {
+          Text = "Ruan's day-to-day operations team acts according to my standards for reliability, integrity and have successfully integrated into our business.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 5,
+          CustomerTypeId = 8,
+        },
+        new Question
+        {
+          Text = "Channels and processes exist for the easy exchange of information between Ruan and your company's employees.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 6,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Operational challenges are promptly addressed by Ruan's day-to-day operations team.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 6,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan communicates proactively and keeps me abreast of information, initiatives, issues, etc.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 6,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan provides an ongoing analysis of your company's business and identifies opportunities for continuous improvement and cost savings.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 6,
+          CustomerTypeId = 5,
+        },
+        new Question
+        {
+          Text = "Ruan conducts business reviews with your company's key personnel.",
+          QuestionType = "10-point scale",
+          Options = "",
+          KpiTypeId = 6,
+          CustomerTypeId = 5,
+        }
+        );
 
         #endregion Questions
 
@@ -718,12 +886,12 @@ namespace CustomerFeedback.Models
         //  },
         //  new CustomerType
         //  {
-        //    Type = "MT",
+        //    Type = 7,
         //    Description = "Managed Transportation"
         //  },
         //  new CustomerType
         //  {
-        //    Type = "DCT",
+        //    Type = 8,
         //    Description = "Dedicated Partnership"
         //  }
         //);

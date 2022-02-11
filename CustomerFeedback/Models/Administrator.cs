@@ -49,6 +49,6 @@ namespace CustomerFeedback.Models
     /// Navigation relationships
     /// </summary>
 
-    public List<Survey>? Surveys { get; set; }
+    public virtual List<Survey>? Surveys { get; set; }
   }
 }

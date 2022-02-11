@@ -8,16 +8,14 @@
 
 <h1>Surveys</h1>
 
-
-
 @*<p>
     <a asp-action="Create">Create New</a>
 </p>*@
 <div class="row justify-content-between">
-  <div class="col-3">
+  <div class="col-lg-6 col-md-3">
     <a asp-action="Create" class="btn btn-success my-2">Create New</a>
   </div>
-  <div class="col-sm-auto">
+  <div class="col-lg-6 col-md-9 col-sm-auto">
     <form asp-controller="Surveys" asp-action="Index" method="get">
       <div class="row">
         <div class="col">
@@ -78,26 +76,26 @@
             @Html.DisplayFor(modelItem => item.ExpireDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.AdministratorId)
+            @Html.DisplayFor(modelItem => item.Administrator.EmpId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CustomerType)
+            @Html.DisplayFor(modelItem => item.CustomerType.Type)
         </td>
-        <td>
-          <div class="row justify-content-between">
-            <div class="col text-nowrap">
-              <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary" title="Edit">
-                <i class="fas fa-pencil-alt text-light"></i>
-              </a> |
-              <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info" title="Details">
-                <i class="fas fa-list-ul text-light"></i>
-              </a> |
-              <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger" title="Delete">
-                <i class="fas fa-trash-alt text-light"></i>
-              </a> 
-            </div>
-          </div>
-        </td>
+            <td>
+              <div class="row justify-content-between">
+                <div class="col text-nowrap">
+                  <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary" title="Edit">
+                    <i class="fas fa-pencil-alt text-light"></i>
+                  </a> |
+                  <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info" title="Details">
+                    <i class="fas fa-list-ul text-light"></i>
+                  </a> |
+                  <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger" title="Delete">
+                    <i class="fas fa-trash-alt text-light"></i>
+                  </a> 
+                </div>
+              </div>
+            </td>
       </tr>
     }
   </tbody>

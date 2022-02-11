@@ -22,8 +22,8 @@ namespace CustomerFeedback.Models
     /// Customers, Questions, and Surveys, but those do not each have many CustomerType categories.
     /// </summary>
 
-    public List<Customer>? Customers { get; set; }
-    public List<Question>? Questions { get; set; }
-    public List<Survey>? Surveys { get; set; }
+    public virtual List<Customer>? Customers { get; set; }
+    public virtual List<Question>? Questions { get; set; }
+    public virtual List<Survey>? Surveys { get; set; }
   }
 }

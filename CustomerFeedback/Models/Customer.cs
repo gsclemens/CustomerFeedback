@@ -44,6 +44,6 @@ namespace CustomerFeedback.Models
     /// but an individual SR should have only one Customer & Client
     /// </summary>
 
-    public List<SurveyResponse>? SurveyResponses { get; set; }
+    public virtual List<SurveyResponse>? SurveyResponses { get; set; }
   }
 }

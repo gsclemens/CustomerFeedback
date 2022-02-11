@@ -29,7 +29,8 @@ namespace CustomerFeedback.Controllers
     //}
 
     // GET: Surveys
-    public async Task<IActionResult> Index(string surveyCustomerType, string searchString)
+
+    public async Task<IActionResult> Index(int? id, string surveyCustomerType, string searchString)
     {
       // Use LINQ to get list of customerTypes.
       IQueryable<string> customerTypeQuery = from m in _context.Survey
@@ -51,7 +52,7 @@ namespace CustomerFeedback.Controllers
       var surveyCustomerTypeVM = new SurveyCustomerTypeVM
       {
         CustomerTypes = new SelectList(await customerTypeQuery.Distinct().ToListAsync()),
-        Surveys = await surveys.ToListAsync()
+        Surveys = await surveys.ToListAsync(),
       };
 
       return View(surveyCustomerTypeVM);

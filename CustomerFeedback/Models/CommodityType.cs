@@ -23,6 +23,6 @@ namespace CustomerFeedback.Models
     /// Customers, but those Customers do not each have many CommodityType categories.
     /// </summary>
 
-    public List<Customer>? Customers { get; set; }
+    public virtual List<Customer>? Customers { get; set; }
   }
 }

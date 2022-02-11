@@ -49,7 +49,7 @@ namespace CustomerFeedback.Models
     /// <summary>
     /// Navigation relationships
 
-    public Customer? Customer { get; set; }
-    public List<SurveyResponse>? SurveyResponses { get; set; }
+    public virtual Customer? Customer { get; set; }
+    public virtual List<SurveyResponse>? SurveyResponses { get; set; }
   }
 }

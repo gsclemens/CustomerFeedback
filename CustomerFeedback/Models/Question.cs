@@ -40,7 +40,7 @@ namespace CustomerFeedback.Models
     [InverseProperty("Question")]
     public ICollection<SurveyQuestion> SurveyQuestions { get; set; }
 
-    public List<KpiType>? KpiType { get; set; }
-    public CustomerType? CustomerType { get; set; }
+    public virtual List<KpiType>? KpiType { get; set; }
+    public virtual CustomerType? CustomerType { get; set; }
   }
 }

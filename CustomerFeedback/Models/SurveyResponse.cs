@@ -38,12 +38,12 @@ namespace CustomerFeedback.Models
     /// </summary>
 
     [ForeignKey("SurveyId")]
-    public Survey Survey { get; set; }
+    public virtual Survey Survey { get; set; }
 
     [ForeignKey("QuestionId")]
-    public Question Question { get; set; }
+    public virtual Question Question { get; set; }
 
-    public Contact? Contact { get; set; }
-    public Customer? Customer { get; set; }
+    public virtual Contact? Contact { get; set; }
+    public virtual Customer? Customer { get; set; }
   }
 }

@@ -8,5 +8,8 @@ namespace CustomerFeedback.Models.ViewModels
     public SelectList? CustomerTypes { get; set; }
     public string? SurveyCustomerType { get; set; }
     public string? SearchString { get; set; }
+
+
+    public SelectList? Administrators { get; set; }
   }
 }

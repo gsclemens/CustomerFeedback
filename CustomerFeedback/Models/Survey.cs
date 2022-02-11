@@ -32,12 +32,12 @@ namespace CustomerFeedback.Models
     /// Navigation classes
     /// </summary>
 
-    public List<SurveyResponse>? SurveyResponses { get; set; }
+    public virtual List<SurveyResponse>? SurveyResponses { get; set; }
 
     [InverseProperty("Survey")]
-    public ICollection<SurveyQuestion>? SurveyQuestions { get; set; }
+    public virtual ICollection<SurveyQuestion>? SurveyQuestions { get; set; }
 
-    public Administrator? Administrator { get; set; }
-    public CustomerType? CustomerType { get; set; }
+    public virtual Administrator? Administrator { get; set; }
+    public virtual CustomerType? CustomerType { get; set; }
   }
 }

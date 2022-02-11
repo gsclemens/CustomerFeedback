@@ -53,11 +53,6 @@ namespace CustomerFeedback.Controllers
         surveys = surveys.Where(x => x.CustomerType.Type == surveyCustomerType);
       }
 
-      if (id != 0)
-      {
-        surveys = surveys.Where(x => x.CustomerType.Type == surveyCustomerType);
-      }
-
       var surveyVM = new SurveyVM
       {
         CustomerTypes = new SelectList(await customerTypeQuery.Distinct().ToListAsync()),

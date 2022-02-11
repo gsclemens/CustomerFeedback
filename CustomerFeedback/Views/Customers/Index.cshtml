@@ -32,38 +32,38 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+    @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerTypeId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Note)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ContactId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Url)
-            </td>
-            <td>
-              <div class="row justify-content-between">
-                <div class="col text-nowrap">
-                  <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary" title="Edit">
-                    <i class="fas fa-pencil-alt text-light"></i>
-                  </a> |
-                  <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info" title="Details">
-                    <i class="fas fa-list-ul text-light"></i>
-                  </a> |
-                  <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger" title="Delete">
-                    <i class="fas fa-trash-alt text-light"></i>
-                  </a> 
-                </div>
+          <td>
+              @Html.DisplayFor(modelItem => item.Name)
+          </td>
+          <td>
+              @Html.DisplayFor(modelItem => item.CustomerTypeId)
+          </td>
+          <td>
+              @Html.DisplayFor(modelItem => item.Note)
+          </td>
+          <td>
+              @Html.DisplayFor(modelItem => item.ContactId)
+          </td>
+          <td>
+              @Html.DisplayFor(modelItem => item.Url)
+          </td>
+          <td>
+            <div class="row justify-content-between">
+              <div class="col text-nowrap">
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary" title="Edit">
+                  <i class="fas fa-pencil-alt text-light"></i>
+                </a> |
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info" title="Details">
+                  <i class="fas fa-list-ul text-light"></i>
+                </a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger" title="Delete">
+                  <i class="fas fa-trash-alt text-light"></i>
+                </a> 
               </div>
-            </td>
+            </div>
+          </td>
         </tr>
 }
     </tbody>

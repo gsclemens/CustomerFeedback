@@ -282,252 +282,677 @@ namespace CustomerFeedback.Models
 
         #region Questions
 
-        if (context.Question.Any())
-        {
-          return;   // DB has been seeded
-        }
-        context.Question.AddRange(
-        new Question
-        {
-          Text = "Ruan's on-time delivery rate meets my expectations.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 2,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan's suite of tools for route optimization and network analysis meets my needs.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 2,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan provides an effective and unique backhaul program.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 2,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan performs at or above our revenue-sharing agreement.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 2,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan partner carriers are professional and Ruan’s team promptly addresses any concerns.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 3,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan’s Claims Management Processes support your company’s business needs.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 3,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan's Customer Portal is easily accessible and provides me valuable information and visibility",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 3,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan's Routing Optimization and/or Carrier Selection provides a cost effective and service oriented solution.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 3,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan offers ideas to improve my supply chain network.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 3,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan improves our transportation process and provides information that drives efficiency, cost avoidance, and removes waste.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 3,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan's Business Intelligence Reporting provides meaningful metrics that help me to better manage my business.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 3,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan completes your company's warehouse orders on time.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 4,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan's order fulfillment and inventory accuracy meet my expectations.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 4,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan provides timely feedback on supplier compliance and performance.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 4,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan’s ability to adjust to your company's seasonal demands meets my needs.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 4,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan offers ideas to help improve trailer utilization and overall product density.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 4,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan understands my business and is knowledgeable with regard to the transportation industry in general.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 5,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan’s personnel act according to my standards for responsiveness, reliability and integrity.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 5,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan collaborates effectively with your company to evaluate, optimize and deliver a one-source, value-added solution.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 5,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan’s team members understand my operation/business and are knowledgeable with regard to the transportation industry in general.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 5,
-          CustomerTypeId = 7,
-        },
-        new Question
-        {
-          Text = "Ruan’s team acts according to my standards for reliability and integrity.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 5,
-          CustomerTypeId = 7,
-        },
-        new Question
-        {
-          Text = "Ruan's personnel are responsive and courteous.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 5,
-          CustomerTypeId = 7,
-        },
-        new Question
-        {
-          Text = "Ruan’s team acts as an extension of our transportation team.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 5,
-          CustomerTypeId = 7,
-        },
-        new Question
-        {
-          Text = "Ruan's drivers act according to my standards for reliability, integrity and appearance.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 5,
-          CustomerTypeId = 8,
-        },
-        new Question
-        {
-          Text = "Ruan's day-to-day operations team acts according to my standards for reliability, integrity and have successfully integrated into our business.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 5,
-          CustomerTypeId = 8,
-        },
-        new Question
-        {
-          Text = "Channels and processes exist for the easy exchange of information between Ruan and your company's employees.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 6,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Operational challenges are promptly addressed by Ruan's day-to-day operations team.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 6,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan communicates proactively and keeps me abreast of information, initiatives, issues, etc.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 6,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan provides an ongoing analysis of your company's business and identifies opportunities for continuous improvement and cost savings.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 6,
-          CustomerTypeId = 5,
-        },
-        new Question
-        {
-          Text = "Ruan conducts business reviews with your company's key personnel.",
-          QuestionType = "10-point scale",
-          Options = "",
-          KpiTypeId = 6,
-          CustomerTypeId = 5,
-        }
-        );
+        //if (context.Question.Any())
+        //{
+        //  return;   // DB has been seeded
+        //}
+        //context.Question.AddRange(
+        //new Question
+        //{
+        //  Text = "Ruan's on-time delivery rate meets my expectations.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 2,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's suite of tools for route optimization and network analysis meets my needs.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 2,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan provides an effective and unique backhaul program.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 2,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan performs at or above our revenue-sharing agreement.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 2,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan partner carriers are professional and Ruan’s team promptly addresses any concerns.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 3,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan’s Claims Management Processes support your company’s business needs.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 3,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's Customer Portal is easily accessible and provides me valuable information and visibility",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 3,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's Routing Optimization and/or Carrier Selection provides a cost effective and service oriented solution.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 3,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan offers ideas to improve my supply chain network.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 3,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan improves our transportation process and provides information that drives efficiency, cost avoidance, and removes waste.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 3,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's Business Intelligence Reporting provides meaningful metrics that help me to better manage my business.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 3,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan completes your company's warehouse orders on time.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 4,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's order fulfillment and inventory accuracy meet my expectations.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 4,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan provides timely feedback on supplier compliance and performance.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 4,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan’s ability to adjust to your company's seasonal demands meets my needs.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 4,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan offers ideas to help improve trailer utilization and overall product density.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 4,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan understands my business and is knowledgeable with regard to the transportation industry in general.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan’s personnel act according to my standards for responsiveness, reliability and integrity.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan collaborates effectively with your company to evaluate, optimize and deliver a one-source, value-added solution.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan’s team members understand my operation/business and are knowledgeable with regard to the transportation industry in general.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 7,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan’s team acts according to my standards for reliability and integrity.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 7,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's personnel are responsive and courteous.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 7,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan’s team acts as an extension of our transportation team.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 7,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's drivers act according to my standards for reliability, integrity and appearance.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 8,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's day-to-day operations team acts according to my standards for reliability, integrity and have successfully integrated into our business.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 8,
+        //},
+        //new Question
+        //{
+        //  Text = "Channels and processes exist for the easy exchange of information between Ruan and your company's employees.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 6,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Operational challenges are promptly addressed by Ruan's day-to-day operations team.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 6,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan communicates proactively and keeps me abreast of information, initiatives, issues, etc.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 6,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan provides an ongoing analysis of your company's business and identifies opportunities for continuous improvement and cost savings.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 6,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan conducts business reviews with your company's key personnel.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 6,
+        //  CustomerTypeId = 5,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's on-time delivery rate meets my expectations.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 2,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's suite of tools for route optimization and network analysis meets my needs.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 2,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan provides an effective and unique backhaul program.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 2,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan performs at or above our revenue-sharing agreement.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 2,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan partner carriers are professional and Ruan’s team promptly addresses any concerns.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 3,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan’s Claims Management Processes support your company’s business needs.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 3,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's Customer Portal is easily accessible and provides me valuable information and visibility",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 3,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's Routing Optimization and/or Carrier Selection provides a cost effective and service oriented solution.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 3,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan offers ideas to improve my supply chain network.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 3,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan improves our transportation process and provides information that drives efficiency, cost avoidance, and removes waste.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 3,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's Business Intelligence Reporting provides meaningful metrics that help me to better manage my business.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 3,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan completes your company's warehouse orders on time.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 4,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's order fulfillment and inventory accuracy meet my expectations.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 4,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan provides timely feedback on supplier compliance and performance.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 4,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan’s ability to adjust to your company's seasonal demands meets my needs.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 4,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan offers ideas to help improve trailer utilization and overall product density.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 4,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan understands my business and is knowledgeable with regard to the transportation industry in general.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan’s personnel act according to my standards for responsiveness, reliability and integrity.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan collaborates effectively with your company to evaluate, optimize and deliver a one-source, value-added solution.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan’s team members understand my operation/business and are knowledgeable with regard to the transportation industry in general.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 7,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan’s team acts according to my standards for reliability and integrity.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 7
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's personnel are responsive and courteous.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 7
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan’s team acts as an extension of our transportation team.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 7
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's drivers act according to my standards for reliability, integrity and appearance.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 8
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's day-to-day operations team acts according to my standards for reliability, integrity and have successfully integrated into our business.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 5,
+        //  CustomerTypeId = 8
+        //},
+        //new Question
+        //{
+        //  Text = "Channels and processes exist for the easy exchange of information between Ruan and your company's employees.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 6,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Operational challenges are promptly addressed by Ruan's day-to-day operations team.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 6,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan communicates proactively and keeps me abreast of information, initiatives, issues, etc.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 6,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan provides an ongoing analysis of your company's business and identifies opportunities for continuous improvement and cost savings.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 6,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan conducts business reviews with your company's key personnel.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 6,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Channels and processes exist for the easy exchange of information between Ruan and our employees.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 6,
+        //  CustomerTypeId = 7,
+        //},
+        //new Question
+        //{
+        //  Text = "Operational challenges are promptly addressed by Ruan's day-to-day operations team.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 6,
+        //  CustomerTypeId = 7,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan offers ideas to improve our operations.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 6,
+        //  CustomerTypeId = 8
+        //},
+        //new Question
+        //{
+        //  Text = "Channels and processes exist for the easy exchange of information between Ruan and client's employees.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 6,
+        //  CustomerTypeId = 8
+        //},
+        //new Question
+        //{
+        //  Text = "Safety is a key priority for Ruan.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 8,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan delivers high quality service and is customer-focused.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 7,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan provides adequate resources {drivers, staff, tractors, trailers) to successfully operate my business.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 8,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's invoicing processes are timely and accurate.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 7,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "The metrics or Key Performance Indicators {KPIs) that Ruan provides are relevant and are effective in helping me better manage my business.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 7,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan's Information Management System and other technology meets my needs.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 8,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan proficiently manages our carrier Request For Proposal {RFP) events",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 7,
+        //  CustomerTypeId = 7,
+        //},
+        //new Question
+        //{
+        //  Text = "Safety is a key priority among Ruan personnel and their carrier partners.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 8,
+        //  CustomerTypeId = 7,
+        //},
+        //new Question
+        //{
+        //  Text = "Invoicing processes are conducted by Ruan in a timely manner.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 7,
+        //  CustomerTypeId = 7,
+        //},
+        //new Question
+        //{
+        //  Text = "Invoices prepared by Ruan are consistently accurate.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 7,
+        //  CustomerTypeId = 7,
+        //},
+        //new Question
+        //{
+        //  Text = "Ruan technology solutions provide adequate support for my business needs.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 8,
+        //  CustomerTypeId = 8
+        //},
+        //new Question
+        //{
+        //  Text = "Safety is a key priority among Ruan drivers and staff.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 8,
+        //  CustomerTypeId = 8
+        //},
+        //new Question
+        //{
+        //  Text = "Per our contracted agreement, Ruan provides the adequate number of drivers and equipment for our operations.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 8,
+        //  CustomerTypeId = 8
+        //},
+        //new Question
+        //{
+        //  Text = "Per our contracted agreement, Ruan provides an adequate number of office staff members and their hours of operation meet our needs.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 8,
+        //  CustomerTypeId = 8
+        //},
+        //new Question
+        //{
+        //  Text = "Billing processes are conducted by Ruan in a timely manner.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 7,
+        //  CustomerTypeId = 8
+        //},
+        //new Question
+        //{
+        //  Text = "Overall satisfaction with Ruan's performance and value of Ruan's Integrated Solutions services.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 9,
+        //  CustomerTypeId = 5
+        //},
+        //new Question
+        //{
+        //  Text = "Overall satisfaction with Ruan's performance and quality of service.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 9,
+        //  CustomerTypeId = 7,
+        //},
+        //new Question
+        //{
+        //  Text = "Overall satisfaction with Ruan's performance and quality of service.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 9,
+        //  CustomerTypeId = 8
+        //},
+        //new Question
+        //{
+        //  Text = "Likelihood of recommending Ruan to business associate.",
+        //  QuestionType = "10-point scale",
+        //  Options = "",
+        //  KpiTypeId = 10,
+        //  CustomerTypeId = 5
+        //}
+
+        //);
 
         #endregion Questions
 
@@ -869,27 +1294,27 @@ namespace CustomerFeedback.Models
         //  }
         //);
 
-        //if (context.CustomerType.Any())
+        //if (context.CustomerTypeId.Any())
         //{
         //  return;   // DB has been seeded
         //}
-        //context.CustomerType.AddRange(
-        //  new CustomerType
+        //context.CustomerTypeId.AddRange(
+        //  new CustomerTypeId
         //  {
         //    Type = "IS",
         //    Description = "Integrated Solutions"
         //  },
-        //  new CustomerType
+        //  new CustomerTypeId
         //  {
         //    Type = "ISNW",
         //    Description = "Integrated Solutions No Warehouse"
         //  },
-        //  new CustomerType
+        //  new CustomerTypeId
         //  {
         //    Type = 7,
         //    Description = "Managed Transportation"
         //  },
-        //  new CustomerType
+        //  new CustomerTypeId
         //  {
         //    Type = 8,
         //    Description = "Dedicated Partnership"

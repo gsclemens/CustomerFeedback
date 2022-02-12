@@ -46,7 +46,10 @@
                 @Html.DisplayNameFor(model => model.Survey)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Contact)
+                @Html.DisplayNameFor(model => model.Customer.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact.NameFull)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Question)
@@ -72,7 +75,10 @@
                 @Html.DisplayFor(modelItem => item.Survey.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Contact.Id)
+                @Html.DisplayFor(modelItem => item.Customer.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact.NameFull)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Question.Id)

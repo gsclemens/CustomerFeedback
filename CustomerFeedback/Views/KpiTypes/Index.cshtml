@@ -1,41 +1,54 @@
 ﻿@model IEnumerable<CustomerFeedback.Models.KpiType>
 
+
 @{
-    ViewData["Title"] = "Index";
+  ViewData["Title"] = "KPI Types";
+  string tableNav = "Actions";
 }
 
-<h1>Index</h1>
+<h1>KPI Types</h1>
+<h2><small class="lead">Key Performance Indicators</small></h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Type)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
+<a asp-action="Create" class="btn btn-success my-2">Create New</a>
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th>
+          @Html.DisplayNameFor(model => model.Type)
+      </th>
+      <th>
+          @Html.DisplayNameFor(model => model.Description)
+      </th>
+      <th>
+          @Html.DisplayName(tableNav)
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach (var item in Model) {
+    <tr>
+      <td>
+          @Html.DisplayFor(modelItem => item.Type)
+      </td>
+      <td>
+          @Html.DisplayFor(modelItem => item.Description)
+      </td>
+      <td>
+        <div class="row justify-content-between">
+          <div class="col text-nowrap">
+            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary" title="Edit">
+              <i class="fas fa-pencil-alt text-light"></i>
+            </a> |
+            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info" title="Details">
+              <i class="fas fa-list-ul text-light"></i>
+            </a> |
+            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger" title="Delete">
+              <i class="fas fa-trash-alt text-light"></i>
+            </a> 
+          </div>
+        </div>
+      </td>
+    </tr>
+  }
+  </tbody>
 </table>

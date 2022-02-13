@@ -54,6 +54,7 @@ namespace CustomerFeedback.Data
     public DbSet<CustomerType> CustomerType { get; set; }
     public DbSet<KpiType> KpiType { get; set; }
     public DbSet<Question> Question { get; set; }
+    public DbSet<Import> Import { get; set; }
     public DbSet<Survey> Survey { get; set; }
     public DbSet<SurveyQuestion> SurveyQuestion { get; set; }
     public DbSet<SurveyResponse> SurveyResponse { get; set; }

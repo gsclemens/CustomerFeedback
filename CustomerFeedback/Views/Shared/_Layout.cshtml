@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="~/CustomerFeedback.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
 </head>
-<body class="vh-100 pb-5">
+<body class="min-vh-100 d-flex flex-column justify-content-between pb-5">
+  <div>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -24,24 +25,67 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Surveys" asp-action="Index">Surveys</a>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" asp-area="" asp-controller="" asp-action="">Surveys</a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                              <a class="dropdown-item" asp-area="" asp-controller="Surveys" asp-action="Index">Surveys</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" asp-area="" asp-controller="SurveyResponses" asp-action="Index">Survey Responses</a>
+                            </li>
+
+                            <li>
+                              <a class="dropdown-item" asp-area="" asp-controller="Questions" asp-action="Index">Questions</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" asp-area="" asp-controller="SurveyQuestions" asp-action="Index"> Survey Questions</a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" asp-area="" asp-controller="Imports" asp-action="Index">Import Survey Responses</a>
+                            </li>
+                          </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Customers" asp-action="Index">Customers</a>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" id="navbarDDL"  role="button" data-bs-toggle="dropdown" aria-expanded="false" asp-area="" asp-controller="" asp-action="">Customers</a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDDL">
+                            <li>
+                                <a class="dropdown-item" asp-area="" asp-controller="Customers" asp-action="Index">Customers</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" asp-area="" asp-controller="Contacts" asp-action="Index">Contacts</a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" asp-area="" asp-controller="CustomerTypes" asp-action="Index">Customer Types</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" asp-area="" asp-controller="CommodityTypes" asp-action="Index">Commodity Types</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" asp-area="" asp-controller="KpiTypes" asp-action="Index">Key Performance Indicators</a>
+                            </li>
+                          </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Contacts" asp-action="Index">Contacts</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Questions" asp-action="Index">Questions</a>
-                        </li>
+
+                        
+@*                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" asp-area="" asp-controller="" asp-action="">Questions</a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                              <a class="dropdown-item" asp-area="" asp-controller="Questions" asp-action="Index">Questions</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" asp-area="" asp-controller="SurveyQuestions" asp-action="Index"> Survey Questions</a>
+                            </li>
+                          </ul>
+                        </li>*@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Administrators" asp-action="Index">Admin</a>
                         </li>
-@*                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>*@
                     </ul>
                 </div>
             </div>
@@ -52,15 +96,15 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-          <small>  &copy; @DateTime.Now.Year - Customer Feedback - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></small>
-        </div>
+  </div>
+    <footer class="footer border-top text-muted bg-white">
+      <div class="container-fluid text-center">
+        <small>  &copy; @DateTime.Now.Year - Customer Feedback - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></small>
+      </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-</body>
+  </body>
 </html>

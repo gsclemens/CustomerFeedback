@@ -41,7 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Students\Index.cshtml" />
+    <None Include="Views\Imports\Index.cshtml" />
   </ItemGroup>
 
 </Project>

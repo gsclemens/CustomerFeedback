@@ -1,11 +1,11 @@
-﻿@model IEnumerable<Student>
+﻿@using CustomerFeedback.Models
+@model IEnumerable<Import>
 @{
     ViewData["Title"] = "Import Survey CSV";
-    string tableNav = "Actions";
 }
 
 <h1>Import Survey CSV</h1>
-<form asp-controller="Students" asp-action="Index" method="post" enctype="multipart/form-data">
+<form asp-controller="Imports" asp-action="Index" method="post" enctype="multipart/form-data">
 
   <div class="card-group my-5">
     <div class="card">
@@ -14,7 +14,7 @@
         <p class="card-text">Select your Survey Results *.csv file.</p>
       </div>
         <div class="card-footer border-light">
-        <input type="file" name="file" class="form-control btn-outline-primary ">            
+        <input type="file" name="file" class="form-control btn-outline-primary ">
     </div>
   </div>
     <div class="card">
@@ -30,12 +30,9 @@
 
 </form>
 
-<hr/>
-
-
 @if ( Model?.Count() > 0 )
 {
-  <div class="card my-4">
+  <div class="card my-5">
     <div class="card-header">
       CSV Import Results
     </div>
@@ -49,18 +46,28 @@
       <table class="table table-sm table-striped" style= "width: 100%">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Roll</th>
+            <th>Respondent ID</th>
+            <th>Collector ID</th>
             <th>Email</th>
+            <th>Title</th>
+            <th>Location</th>
+            <th>A1</th>
+            <th>A2</th>
+            <th>A3</th>
           </tr>
         </thead>
         <tbody>
-        @foreach (Student student in Model)
+        @foreach (Import import in Model)
         {
           <tr>
-            <td>@student.Name</td>
-            <td>@student.Roll</td>
-            <td>@student.Email</td>
+            <td>@import.RespondentID</td>
+            <td>@import.CollectorID</td>
+            <td>@import.EmailAddress</td>
+            <td>@import.Title</td>
+            <td>@import.Location</td>
+            <td>@import.QuestionResponse1</td>
+            <td>@import.QuestionResponse2</td>
+            <td>@import.QuestionResponse3</td>
           </tr>
         }
         </tbody>
@@ -75,8 +82,10 @@
       <p><strong class="text-success">If yes:</strong> Create records to save this data to the Customer Feedback repository.</p>
 
       <div class="form-group">
-        <a asp-action="Index" class="btn btn-labeled btn-danger my-3">Cancel</a> | 
-        <input type="submit" value="Create" class="btn btn-success my-3" />
+        <form asp-controller="Imports" asp-action="Create" method="post">
+          <a asp-action="Index" class="btn btn-labeled btn-danger my-3">Cancel</a> | 
+          <input type="submit" value="Create" class="btn btn-success my-3" />
+        </form>
       </div>         
     </div>
   </div>
@@ -91,4 +100,8 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
